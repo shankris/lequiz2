@@ -1,9 +1,9 @@
 import { Montserrat, Open_Sans } from "next/font/google";
 import "./globals.css";
 
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
-import Sidebar from "@/components/Sidebar/Sidebar";
+import Header from "@/components/layout/Header/Header";
+import Footer from "@/components/layout/Footer/Footer";
+// import Sidebar from "@/components/layout/Sidebar/Sidebar";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -20,8 +20,8 @@ const openSans = Open_Sans({
 });
 
 export const metadata = {
-  title: "Bookmarker 2",
-  description: "A curated list of bookmarks",
+  title: "Le Quiz",
+  description: "Rapid French Language Learning",
 };
 
 export default function RootLayout({ children }) {
@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
         <Header />
 
         <div className='app-shell'>
-          <Sidebar />
+          {/* <Sidebar /> */}
           <main className='app-main'>{children}</main>
           <Footer />
         </div>

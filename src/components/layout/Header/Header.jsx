@@ -2,7 +2,7 @@
 
 import styles from "./Header.module.css";
 import ThemeToggle from "./ThemeToggle";
-import NotificationBell from "../Notification/NotificationBell";
+import NotificationBell from "./Notification/NotificationBell";
 import SearchInput from "./Search/SearchInput";
 
 const notifications = [
@@ -33,7 +33,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
-        <div className={styles.logo}>Bookmarker</div>
+        <div className={styles.logo}>Le Quiz</div>
 
         <div>
           <SearchInput />
