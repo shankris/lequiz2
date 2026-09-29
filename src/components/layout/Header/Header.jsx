@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 
 import styles from "./Header.module.css";
 import ThemeToggle from "./ThemeToggle";
+import LanguageSwitcher from "./LanguageSwitcher/LanguageSwitcher";
 import NotificationBell from "./Notification/NotificationBell";
 import Navigation from "../Navigation/Navigation";
 
@@ -21,6 +22,8 @@ export default function Header() {
 
         <div className={styles.rightIcons}>
           <ThemeToggle />
+
+          <LanguageSwitcher />
 
           <NotificationBell
             onItemClick={(item) => console.log("Clicked", item)}

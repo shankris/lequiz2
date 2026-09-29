@@ -12,10 +12,13 @@ export default getRequestConfig(async ({ requestLocale }) => {
   }
 
   const messages = {
-    common: (await import(`./${locale}/common.json`)).default,
     header: (await import(`./${locale}/header.json`)).default,
+    footer: (await import(`./${locale}/footer.json`)).default,
     navigation: (await import(`./${locale}/navigation.json`)).default,
     home: (await import(`./${locale}/home.json`)).default,
+    learn: (await import(`./${locale}/learn.json`)).default,
+    practice: (await import(`./${locale}/practice.json`)).default,
+    progress: (await import(`./${locale}/progress.json`)).default,
   };
 
   return {

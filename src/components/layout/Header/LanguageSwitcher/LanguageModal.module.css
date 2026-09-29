@@ -1,0 +1,290 @@
+/* src/components/layout/Header/LanguageSwitcher/LanguageModal.module.css */
+
+/* --------------------------------------------------
+   Backdrop
+-------------------------------------------------- */
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: var(--pagePadding);
+
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* --------------------------------------------------
+   Modal
+-------------------------------------------------- */
+
+.modal {
+  width: min(560px, 100%);
+  max-height: min(700px, calc(100vh - 40px));
+
+  border: 1px solid var(--borderColor);
+  border-radius: var(--borderRadius-lg);
+
+  background: var(--surfaceColor);
+  color: var(--txtColor);
+
+  box-shadow: var(--shadow-md);
+
+  overflow: hidden;
+}
+
+/* --------------------------------------------------
+   Header
+-------------------------------------------------- */
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-md);
+
+  padding: 1.25rem 1.25rem 1rem;
+
+  border-bottom: 1px solid var(--borderColor);
+}
+
+.header h2 {
+  margin: 0;
+
+  color: var(--headingCol);
+
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.header p {
+  margin: 0.3rem 0 0;
+
+  color: var(--mutedColor);
+
+  font-size: 0.85rem;
+}
+
+/* --------------------------------------------------
+   Close Button
+-------------------------------------------------- */
+
+.close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  flex-shrink: 0;
+
+  border: 0;
+  border-radius: var(--borderRadius-sm);
+
+  background: transparent;
+  color: var(--mutedColor);
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.close:hover {
+  background-color: var(--mainContentBg);
+  color: var(--txtColor);
+}
+
+.close:focus-visible {
+  outline: 2px solid var(--focusColor);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------
+   Content
+-------------------------------------------------- */
+
+.content {
+  max-height: calc(100vh - 160px);
+
+  padding: 1rem 1.25rem 1.25rem;
+
+  overflow-y: auto;
+}
+
+/* --------------------------------------------------
+   Language Section
+-------------------------------------------------- */
+
+.section+.section {
+  margin-top: 1.25rem;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  margin-bottom: 0.5rem;
+
+  color: var(--headingCol);
+
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.sectionFlag {
+  width: 20px;
+  height: 14px;
+
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+/* --------------------------------------------------
+   Language Grid
+-------------------------------------------------- */
+
+.languages {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.4rem;
+}
+
+/* --------------------------------------------------
+   Language Option
+-------------------------------------------------- */
+
+.language {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  min-width: 0;
+
+  padding: 0.55rem 0.65rem;
+
+  border: 1px solid transparent;
+  border-radius: var(--borderRadius-sm);
+
+  background: var(--mainContentBg);
+  color: var(--txtColor);
+
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.language:hover {
+  border-color: var(--borderColor);
+  background-color: var(--surfaceAlt);
+}
+
+.language:focus-visible {
+  outline: 2px solid var(--focusColor);
+  outline-offset: 1px;
+}
+
+.language.current {
+  border-color: var(--accentColor);
+  background-color: var(--surfaceAlt);
+  color: var(--accentColor);
+}
+
+/* --------------------------------------------------
+   Language Flag
+-------------------------------------------------- */
+
+.flag {
+  width: 24px;
+  height: auto;
+
+  object-fit: cover;
+  border-radius: 2px;
+
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------
+   Language Name
+-------------------------------------------------- */
+
+.name {
+  min-width: 0;
+
+  flex: 1;
+
+  overflow: hidden;
+
+  font-size: 0.82rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* --------------------------------------------------
+   Language Code
+-------------------------------------------------- */
+
+.code {
+  flex-shrink: 0;
+
+  color: var(--mutedColor);
+
+  font-size: 0.68rem;
+  font-weight: 500;
+}
+
+/* --------------------------------------------------
+   Current Check
+-------------------------------------------------- */
+
+.check {
+  flex-shrink: 0;
+
+  color: var(--accentColor);
+
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------
+   Mobile
+-------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .backdrop {
+    align-items: flex-end;
+
+    padding: 0;
+  }
+
+  .modal {
+    width: 100%;
+    max-height: calc(100vh - 20px);
+
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+
+    border-radius: var(--borderRadius-lg) var(--borderRadius-lg) 0 0;
+  }
+
+  .content {
+    max-height: calc(100vh - 140px);
+  }
+
+  .languages {
+    grid-template-columns: 1fr;
+  }
+}

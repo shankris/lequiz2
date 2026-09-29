@@ -2,5 +2,16 @@
   "notifications": "Benachrichtigungen",
   "theme": "Design",
   "light": "Hell",
-  "dark": "Dunkel"
+  "dark": "Dunkel",
+  "language": {
+    "more": "Weitere Sprachen…",
+    "title": "Weitere Sprachen",
+    "description": "Wählen Sie Ihre bevorzugte Sprache.",
+    "close": "Sprachauswahl schließen",
+    "regions": {
+      "europe": "Europa",
+      "asia": "Asien",
+      "india": "Indien"
+    }
+  }
 }

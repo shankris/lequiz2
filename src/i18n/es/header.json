@@ -2,5 +2,16 @@
   "notifications": "Notificaciones",
   "theme": "Tema",
   "light": "Claro",
-  "dark": "Oscuro"
+  "dark": "Oscuro",
+  "language": {
+    "more": "Más idiomas…",
+    "title": "Más idiomas",
+    "description": "Selecciona tu idioma preferido.",
+    "close": "Cerrar selector de idioma",
+    "regions": {
+      "europe": "Europa",
+      "asia": "Asia",
+      "india": "India"
+    }
+  }
 }

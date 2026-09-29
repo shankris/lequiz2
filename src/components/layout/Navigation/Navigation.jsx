@@ -3,6 +3,7 @@
 "use client";
 
 import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
 import { House, BookOpen, Pencil, ChartNoAxesColumn } from "lucide-react";
 
 import navigation from "./navigation.json";
@@ -24,6 +25,9 @@ const icons = {
 // --------------------------------------------------
 
 export default function Navigation({ variant = "desktop" }) {
+  const locale = useLocale();
+  const t = useTranslations("navigation");
+
   return (
     <nav
       className={`${styles.navigation} ${variant === "mobile" ? styles.mobileNavigation : styles.desktopNavigation}`}
@@ -31,11 +35,13 @@ export default function Navigation({ variant = "desktop" }) {
     >
       {navigation.map((item) => {
         const Icon = icons[item.icon];
+        const translationKey = item.label.toLowerCase();
+        const href = `/${locale}${item.href === "/" ? "" : item.href}`;
 
         return (
           <Link
             key={item.href}
-            href={item.href}
+            href={href}
             className={styles.navItem}
           >
             <Icon
@@ -45,7 +51,7 @@ export default function Navigation({ variant = "desktop" }) {
               aria-hidden='true'
             />
 
-            <span className={styles.label}>{item.label}</span>
+            <span className={styles.label}>{t(translationKey)}</span>
           </Link>
         );
       })}

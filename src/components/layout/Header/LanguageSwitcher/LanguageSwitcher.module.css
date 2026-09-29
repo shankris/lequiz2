@@ -1,0 +1,261 @@
+/* src/components/layout/Header/LanguageSwitcher/LanguageSwitcher.module.css */
+
+/* --------------------------------------------------
+   Container
+-------------------------------------------------- */
+
+.container {
+  position: relative;
+}
+
+/* --------------------------------------------------
+   Trigger
+-------------------------------------------------- */
+
+.trigger {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas:
+    "flag flag"
+    "name chevron";
+
+  align-items: center;
+  justify-items: center;
+
+  min-width: 52px;
+  /* padding: 0.3rem 0.4rem; */
+
+  /* column-gap: 0.2rem; */
+  /* row-gap: 0.1rem; */
+
+  border: 1px solid transparent;
+  border-radius: var(--borderRadius-sm);
+
+  background: transparent;
+  color: var(--txtColor);
+
+  cursor: pointer;
+  font: inherit;
+
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.trigger:hover {
+  background-color: var(--surfaceColor);
+  border-color: var(--borderColor);
+}
+
+.trigger:focus-visible {
+  outline: 2px solid var(--focusColor);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------
+   Trigger Flag
+-------------------------------------------------- */
+
+.flag {
+  grid-area: flag;
+
+  width: 24px;
+  height: auto;
+
+  object-fit: cover;
+  border-radius: 2px;
+  margin: -6px 12px 0 0;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------
+   Trigger Language Name
+-------------------------------------------------- */
+
+.languageName {
+  grid-area: name;
+
+  display: inline;
+
+  font-size: 10px;
+  line-height: 1.1;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------
+   Trigger Language Code
+-------------------------------------------------- */
+
+.languageCode {
+  display: none;
+}
+
+/* --------------------------------------------------
+   Chevron
+-------------------------------------------------- */
+
+.chevron {
+  grid-area: chevron;
+
+  display: flex;
+  align-items: center;
+
+  color: var(--mutedColor);
+}
+
+.chevron svg {
+  width: 13px;
+  height: 13px;
+}
+
+/* --------------------------------------------------
+   Dropdown
+-------------------------------------------------- */
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  z-index: 1000;
+
+  width: 200px;
+  padding: 0.4rem;
+
+  border: 1px solid var(--borderColor);
+  border-radius: var(--borderRadius-md);
+
+  background-color: var(--surfaceColor);
+  color: var(--txtColor);
+
+  box-shadow: var(--shadow-md);
+
+  overflow: hidden;
+  transform-origin: top;
+}
+
+/* --------------------------------------------------
+   Language Option
+-------------------------------------------------- */
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  width: 100%;
+  padding: 4px 6px;
+
+  border: 0;
+  border-radius: var(--borderRadius-sm);
+
+  background: transparent;
+  color: var(--txtColor);
+
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.option:hover {
+  background-color: var(--mainContentBg);
+}
+
+.option:focus-visible {
+  outline: 2px solid var(--focusColor);
+  outline-offset: -2px;
+}
+
+.option.current {
+  background-color: var(--mainContentBg);
+  color: var(--accentColor);
+  font-weight: 600;
+}
+
+/* --------------------------------------------------
+   Option Flag
+-------------------------------------------------- */
+
+.optionFlag {
+  width: 24px;
+  height: auto;
+
+  object-fit: cover;
+  border-radius: 2px;
+
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------
+   Option Name
+-------------------------------------------------- */
+
+.optionName {
+  flex: 1;
+
+  font-size: 0.82rem;
+}
+
+/* --------------------------------------------------
+   Option Code
+-------------------------------------------------- */
+
+.optionCode {
+  font-size: 0.68rem;
+  color: var(--mutedColor);
+}
+
+/* --------------------------------------------------
+   Divider
+-------------------------------------------------- */
+
+.divider {
+  height: 1px;
+  margin: 0.35rem 0;
+
+  background-color: var(--borderColor);
+}
+
+/* --------------------------------------------------
+   More Languages
+-------------------------------------------------- */
+
+.moreLanguages {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  width: 100%;
+  padding: 0.55rem 0.65rem;
+
+  border: 0;
+  border-radius: var(--borderRadius-sm);
+
+  background: transparent;
+  color: var(--mutedColor);
+
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  font-size: 0.8rem;
+
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.moreLanguages:hover {
+  background-color: var(--mainContentBg);
+  color: var(--accentColor);
+}
+
+.moreLanguages:focus-visible {
+  outline: 2px solid var(--focusColor);
+  outline-offset: -2px;
+}
