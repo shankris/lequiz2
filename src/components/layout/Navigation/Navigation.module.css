@@ -1,0 +1,113 @@
+/* src/components/layout/Navigation/Navigation.module.css */
+
+/* --------------------------------------------------
+   Base
+-------------------------------------------------- */
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--textColor);
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.navItem:hover {
+  color: var(--accentColor);
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+.label {
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------
+   Desktop Navigation
+-------------------------------------------------- */
+
+.desktopNavigation {
+  gap: 6px;
+}
+
+.desktopNavigation .icon {
+  display: none;
+}
+
+.desktopNavigation .navItem {
+  padding: 7px 10px;
+  border-radius: 6px;
+}
+
+.desktopNavigation .navItem:hover {
+  background-color: var(--surfaceColor);
+}
+
+/* --------------------------------------------------
+   Mobile Navigation
+-------------------------------------------------- */
+
+.mobileNavigation {
+  display: none;
+}
+
+/* --------------------------------------------------
+   Mobile / Tablet
+-------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .desktopNavigation {
+    display: none;
+  }
+
+  .mobileNavigation {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    height: 58px;
+
+    padding: 4px 8px;
+
+    background-color: var(--surfaceColor);
+    border-top: 1px solid var(--borderColor);
+  }
+
+  .mobileNavigation .navItem {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+
+    min-width: 0;
+    border-radius: 6px;
+  }
+
+  .mobileNavigation .icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+
+  .mobileNavigation .label {
+    font-size: 11px;
+  }
+
+  .mobileNavigation .navItem:hover {
+    background-color: var(--mainContentBg);
+  }
+}
