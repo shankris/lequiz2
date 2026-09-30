@@ -8,6 +8,7 @@ import "../globals.css";
 
 import Header from "@/components/layout/Header/Header";
 import Footer from "@/components/layout/Footer/Footer";
+import LevelWatermark from "@/components/layout/ui/LevelWatermark/LevelWatermark";
 
 // --------------------------------------------------
 // Fonts
@@ -45,7 +46,7 @@ export default async function LocaleLayout({ children, params }) {
             {/* <Sidebar /> */}
 
             <main className='app-main'>{children}</main>
-
+            <LevelWatermark />
             <Footer />
           </div>
         </NextIntlClientProvider>

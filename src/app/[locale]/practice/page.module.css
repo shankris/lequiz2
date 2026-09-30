@@ -51,17 +51,13 @@
 
 .practiceCard:hover {
   border-color: var(--focusColor);
-
-  background-color: var(--card1bg);
-
-  transform: translateY(-1px);
+  /* background-color: var(--card1bg); */
+  /* transform: translateY(-1px); */
 }
 
 .practiceCard h3 {
   margin: 0;
-
   color: var(--headingCol);
-
   font-size: 16px;
   font-weight: 500;
   line-height: 1.4;

@@ -2,6 +2,7 @@
 
 "use client";
 
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 import styles from "./Header.module.css";
@@ -16,7 +17,17 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
-        <div className={styles.logo}>Le Quiz</div>
+        <div className={styles.logo}>
+          <Image
+            src='/flags/Fr_flag_logo.svg'
+            alt=''
+            width={45}
+            height={28}
+            className={styles.logoImage}
+          />
+
+          <span>LeQuiz</span>
+        </div>
 
         <Navigation variant='desktop' />
 

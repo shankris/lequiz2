@@ -25,3 +25,17 @@
   align-items: center;
   gap: 1rem;
 }
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -6px 0 0 0;
+}
+
+.logo span {
+  font-size: 26px;
+  padding: 0 0 0 8px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
