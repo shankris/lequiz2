@@ -1,4 +1,213 @@
 {
   "title": "Practice French",
-  "subtitle": "Strengthen your skills with focused exercises."
+  "subtitle": "Strengthen your skills with focused exercises.",
+
+  "tabs": {
+    "basics": {
+      "title": "Basics",
+      "description": "Build a strong foundation with essential French structures."
+    },
+    "vocabulary": {
+      "title": "Vocabulary",
+      "description": "Build your French vocabulary through focused practice."
+    },
+    "adjectives": {
+      "title": "Adjectives",
+      "description": "Practice describing people and things with French adjectives."
+    },
+    "grammar": {
+      "title": "Grammar",
+      "description": "Practice the structures and rules that help you form French sentences."
+    },
+    "conjugation": {
+      "title": "Conjugation",
+      "description": "Practice French verbs and the ways they change across common tenses."
+    }
+  },
+
+  "items": {
+    "definite-articles": {
+      "title": "Definite Articles",
+      "subtitle": "le, la, les, l’",
+      "description": "Practice choosing the correct definite article for each noun."
+    },
+    "indefinite-articles": {
+      "title": "Indefinite Articles",
+      "subtitle": "un, une, des",
+      "description": "Practice using indefinite articles when talking about people and things."
+    },
+    "partitive-articles": {
+      "title": "Partitive Articles",
+      "subtitle": "du, de la, de l’, des",
+      "description": "Practice using partitive articles to talk about unspecified quantities."
+    },
+    "demonstratives": {
+      "title": "Demonstratives",
+      "subtitle": "ce, cet, cette, ces",
+      "description": "Practice using demonstratives to identify people and things."
+    },
+    "possessives": {
+      "title": "Possessives",
+      "subtitle": "mon, ma, mes...",
+      "description": "Practice using possessives to show who something belongs to."
+    },
+    "subject-pronouns": {
+      "title": "Subject Pronouns",
+      "subtitle": "elle, ils, nous, vous",
+      "description": "Practice choosing the correct subject pronoun in French sentences."
+    },
+    "cest-ce-sont-il-y-a": {
+      "title": "C’est / Ce sont, Il y a",
+      "subtitle": "Common basic sentence structures",
+      "description": "Practice some of the most common basic structures used in French."
+    },
+
+    "greetings": {
+      "title": "Greetings",
+      "description": "Practice common French greetings and everyday expressions."
+    },
+    "numbers": {
+      "title": "Numbers",
+      "description": "Practice French numbers and their everyday uses."
+    },
+    "family": {
+      "title": "Family",
+      "description": "Practice vocabulary for talking about family and relationships."
+    },
+    "countries-nationalities": {
+      "title": "Countries and Nationalities",
+      "description": "Practice talking about countries, nationalities, and where people are from."
+    },
+    "days-months": {
+      "title": "Days and Months",
+      "description": "Practice the days of the week and months of the year."
+    },
+    "dates": {
+      "title": "Dates",
+      "description": "Practice saying and understanding dates in French."
+    },
+    "time": {
+      "title": "Time",
+      "description": "Practice telling and understanding the time in French."
+    },
+    "home": {
+      "title": "Home",
+      "description": "Practice vocabulary for rooms, objects, and everyday life at home."
+    },
+    "food-drinks": {
+      "title": "Food and Drinks",
+      "description": "Practice vocabulary for common foods, drinks, and meals."
+    },
+    "clothing": {
+      "title": "Clothing",
+      "description": "Practice vocabulary for clothes and what people wear."
+    },
+    "body": {
+      "title": "Body",
+      "description": "Practice vocabulary for parts of the body."
+    },
+    "city": {
+      "title": "City",
+      "description": "Practice vocabulary for places and things you find in a city."
+    },
+    "transportation": {
+      "title": "Transportation",
+      "description": "Practice vocabulary for common forms of transportation and travel."
+    },
+    "weather": {
+      "title": "Weather",
+      "description": "Practice vocabulary and expressions for talking about the weather."
+    },
+    "leisure": {
+      "title": "Leisure",
+      "description": "Practice vocabulary for hobbies, activities, and free time."
+    },
+    "opposites": {
+      "title": "Opposites",
+      "description": "Practice common French words with opposite meanings."
+    },
+
+    "common-adjectives": {
+      "title": "Common Adjectives",
+      "description": "Practice common adjectives used to describe people and things."
+    },
+    "masculine-feminine": {
+      "title": "Masculine / Feminine",
+      "description": "Practice identifying and using masculine and feminine forms."
+    },
+    "singular-plural": {
+      "title": "Singular / Plural",
+      "description": "Practice identifying and using singular and plural forms."
+    },
+    "adjective-agreement": {
+      "title": "Adjective Agreement",
+      "description": "Practice making adjectives agree with the nouns they describe."
+    },
+
+    "negation": {
+      "title": "Negation — ne...pas",
+      "description": "Practice forming negative sentences using ne...pas."
+    },
+    "questions": {
+      "title": "Questions",
+      "description": "Practice forming and understanding questions in French."
+    },
+    "question-words": {
+      "title": "Question Words",
+      "description": "Practice common words used to ask questions in French."
+    },
+    "prepositions": {
+      "title": "Prepositions",
+      "description": "Practice common French prepositions and how they are used."
+    },
+    "contractions": {
+      "title": "Contractions — au, aux, du, des",
+      "description": "Practice common French contractions formed with à and de."
+    },
+    "quantities": {
+      "title": "Quantities",
+      "description": "Practice words and expressions used to talk about quantities."
+    },
+
+    "etre": {
+      "title": "Être",
+      "description": "Practice conjugating and using the verb être."
+    },
+    "avoir": {
+      "title": "Avoir",
+      "description": "Practice conjugating and using the verb avoir."
+    },
+    "aller": {
+      "title": "Aller",
+      "description": "Practice conjugating and using the verb aller."
+    },
+    "faire": {
+      "title": "Faire",
+      "description": "Practice conjugating and using the verb faire."
+    },
+    "er-verbs": {
+      "title": "Verbs Ending in -ER",
+      "description": "Practice the basic conjugation pattern of regular -ER verbs."
+    },
+    "irregular-verbs": {
+      "title": "Irregular Verbs",
+      "description": "Practice the conjugation patterns of common irregular French verbs."
+    },
+    "common-verbs": {
+      "title": "Common Verbs",
+      "description": "Practice conjugating and using frequently used French verbs."
+    },
+    "present": {
+      "title": "Present",
+      "description": "Practice using the present tense to talk about actions and situations."
+    },
+    "near-future": {
+      "title": "Near Future",
+      "description": "Practice forming and using the near future with aller."
+    },
+    "passe-compose": {
+      "title": "Passé Composé",
+      "description": "Practice forming and using the passé composé for completed actions."
+    }
+  }
 }

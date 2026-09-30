@@ -45,8 +45,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, li, figcaption {
-  max-width: 85ch;
+  max-width: 80ch;
   text-wrap: pretty;
+  color: var(--mutedColor)
 }
 
 p {

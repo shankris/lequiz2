@@ -1,4 +1,213 @@
 {
   "title": "Französisch üben",
-  "subtitle": "Stärken Sie Ihre Kenntnisse mit gezielten Übungen."
+  "subtitle": "Stärken Sie Ihre Kenntnisse mit gezielten Übungen.",
+
+  "tabs": {
+    "basics": {
+      "title": "Grundlagen",
+      "description": "Bauen Sie mit wichtigen französischen Strukturen eine solide Grundlage auf."
+    },
+    "vocabulary": {
+      "title": "Wortschatz",
+      "description": "Erweitern Sie Ihren französischen Wortschatz mit gezielten Übungen."
+    },
+    "adjectives": {
+      "title": "Adjektive",
+      "description": "Üben Sie, Personen und Dinge mit französischen Adjektiven zu beschreiben."
+    },
+    "grammar": {
+      "title": "Grammatik",
+      "description": "Üben Sie die Strukturen und Regeln, die Ihnen beim Bilden französischer Sätze helfen."
+    },
+    "conjugation": {
+      "title": "Konjugation",
+      "description": "Üben Sie französische Verben und ihre Formen in den wichtigsten Zeitformen."
+    }
+  },
+
+  "items": {
+    "definite-articles": {
+      "title": "Bestimmte Artikel",
+      "subtitle": "le, la, les, l’",
+      "description": "Üben Sie, den richtigen bestimmten Artikel für jedes Substantiv zu wählen."
+    },
+    "indefinite-articles": {
+      "title": "Unbestimmte Artikel",
+      "subtitle": "un, une, des",
+      "description": "Üben Sie die Verwendung unbestimmter Artikel, wenn Sie über Personen und Dinge sprechen."
+    },
+    "partitive-articles": {
+      "title": "Teilungsartikel",
+      "subtitle": "du, de la, de l’, des",
+      "description": "Üben Sie die Verwendung von Teilungsartikeln, um unbestimmte Mengen auszudrücken."
+    },
+    "demonstratives": {
+      "title": "Demonstrativbegleiter",
+      "subtitle": "ce, cet, cette, ces",
+      "description": "Üben Sie die Verwendung von Demonstrativbegleitern, um Personen und Dinge zu bezeichnen."
+    },
+    "possessives": {
+      "title": "Possessivbegleiter",
+      "subtitle": "mon, ma, mes...",
+      "description": "Üben Sie die Verwendung von Possessivbegleitern, um auszudrücken, wem etwas gehört."
+    },
+    "subject-pronouns": {
+      "title": "Subjektpronomen",
+      "subtitle": "elle, ils, nous, vous",
+      "description": "Üben Sie, in französischen Sätzen das richtige Subjektpronomen zu wählen."
+    },
+    "cest-ce-sont-il-y-a": {
+      "title": "C’est / Ce sont, Il y a",
+      "subtitle": "Häufige grundlegende Satzstrukturen",
+      "description": "Üben Sie einige der häufigsten grundlegenden Strukturen im Französischen."
+    },
+
+    "greetings": {
+      "title": "Begrüßungen",
+      "description": "Üben Sie häufige französische Begrüßungen und Ausdrücke aus dem Alltag."
+    },
+    "numbers": {
+      "title": "Zahlen",
+      "description": "Üben Sie französische Zahlen und ihre Verwendung im Alltag."
+    },
+    "family": {
+      "title": "Familie",
+      "description": "Üben Sie den Wortschatz, um über Familie und Beziehungen zu sprechen."
+    },
+    "countries-nationalities": {
+      "title": "Länder und Nationalitäten",
+      "description": "Üben Sie, über Länder, Nationalitäten und die Herkunft von Personen zu sprechen."
+    },
+    "days-months": {
+      "title": "Tage und Monate",
+      "description": "Üben Sie die Wochentage und die Monate des Jahres."
+    },
+    "dates": {
+      "title": "Datum",
+      "description": "Üben Sie, Datumsangaben auf Französisch zu sagen und zu verstehen."
+    },
+    "time": {
+      "title": "Uhrzeit",
+      "description": "Üben Sie, die Uhrzeit auf Französisch anzugeben und zu verstehen."
+    },
+    "home": {
+      "title": "Zuhause",
+      "description": "Üben Sie den Wortschatz für Räume, Gegenstände und den Alltag zu Hause."
+    },
+    "food-drinks": {
+      "title": "Essen und Getränke",
+      "description": "Üben Sie den Wortschatz für alltägliche Lebensmittel, Getränke und Mahlzeiten."
+    },
+    "clothing": {
+      "title": "Kleidung",
+      "description": "Üben Sie den Wortschatz für Kleidung und was Menschen tragen."
+    },
+    "body": {
+      "title": "Körper",
+      "description": "Üben Sie den Wortschatz für die verschiedenen Körperteile."
+    },
+    "city": {
+      "title": "Stadt",
+      "description": "Üben Sie den Wortschatz für Orte und Dinge, die man in einer Stadt findet."
+    },
+    "transportation": {
+      "title": "Verkehrsmittel",
+      "description": "Üben Sie den Wortschatz für gängige Verkehrsmittel und Reisen."
+    },
+    "weather": {
+      "title": "Wetter",
+      "description": "Üben Sie den Wortschatz und die Ausdrücke, um über das Wetter zu sprechen."
+    },
+    "leisure": {
+      "title": "Freizeit",
+      "description": "Üben Sie den Wortschatz für Hobbys, Aktivitäten und Freizeit."
+    },
+    "opposites": {
+      "title": "Gegensätze",
+      "description": "Üben Sie häufige französische Wörter mit entgegengesetzten Bedeutungen."
+    },
+
+    "common-adjectives": {
+      "title": "Häufige Adjektive",
+      "description": "Üben Sie häufig verwendete Adjektive zur Beschreibung von Personen und Dingen."
+    },
+    "masculine-feminine": {
+      "title": "Maskulin / Feminin",
+      "description": "Üben Sie, maskuline und feminine Formen zu erkennen und zu verwenden."
+    },
+    "singular-plural": {
+      "title": "Singular / Plural",
+      "description": "Üben Sie, Singular- und Pluralformen zu erkennen und zu verwenden."
+    },
+    "adjective-agreement": {
+      "title": "Adjektivübereinstimmung",
+      "description": "Üben Sie, Adjektive an die Substantive anzupassen, die sie beschreiben."
+    },
+
+    "negation": {
+      "title": "Verneinung — ne...pas",
+      "description": "Üben Sie, negative Sätze mit ne...pas zu bilden."
+    },
+    "questions": {
+      "title": "Fragen",
+      "description": "Üben Sie, Fragen auf Französisch zu bilden und zu verstehen."
+    },
+    "question-words": {
+      "title": "Fragewörter",
+      "description": "Üben Sie häufige Wörter, die verwendet werden, um auf Französisch Fragen zu stellen."
+    },
+    "prepositions": {
+      "title": "Präpositionen",
+      "description": "Üben Sie häufige französische Präpositionen und ihre Verwendung."
+    },
+    "contractions": {
+      "title": "Zusammenziehungen — au, aux, du, des",
+      "description": "Üben Sie häufige französische Zusammenziehungen mit à und de."
+    },
+    "quantities": {
+      "title": "Mengenangaben",
+      "description": "Üben Sie Wörter und Ausdrücke, mit denen Mengen angegeben werden."
+    },
+
+    "etre": {
+      "title": "Être",
+      "description": "Üben Sie die Konjugation und Verwendung des Verbs être."
+    },
+    "avoir": {
+      "title": "Avoir",
+      "description": "Üben Sie die Konjugation und Verwendung des Verbs avoir."
+    },
+    "aller": {
+      "title": "Aller",
+      "description": "Üben Sie die Konjugation und Verwendung des Verbs aller."
+    },
+    "faire": {
+      "title": "Faire",
+      "description": "Üben Sie die Konjugation und Verwendung des Verbs faire."
+    },
+    "er-verbs": {
+      "title": "Verben auf -ER",
+      "description": "Üben Sie das grundlegende Konjugationsmuster regelmäßiger Verben auf -ER."
+    },
+    "irregular-verbs": {
+      "title": "Unregelmäßige Verben",
+      "description": "Üben Sie die Konjugationsmuster häufiger unregelmäßiger französischer Verben."
+    },
+    "common-verbs": {
+      "title": "Häufige Verben",
+      "description": "Üben Sie die Konjugation und Verwendung häufig verwendeter französischer Verben."
+    },
+    "present": {
+      "title": "Präsens",
+      "description": "Üben Sie das Präsens, um über Handlungen und Situationen zu sprechen."
+    },
+    "near-future": {
+      "title": "Nahes Futur",
+      "description": "Üben Sie die Bildung und Verwendung des nahen Futurs mit aller."
+    },
+    "passe-compose": {
+      "title": "Passé composé",
+      "description": "Üben Sie die Bildung und Verwendung des passé composé für abgeschlossene Handlungen."
+    }
+  }
 }

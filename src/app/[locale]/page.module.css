@@ -1,0 +1,33 @@
+.columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  gap: 6px;
+}
+
+.leftColumn {
+  min-width: 0;
+}
+
+.rightColumn {
+  width: 200px;
+  margin: 100px 0 0 0;
+}
+
+/* --------------------------------------------------
+   Mobile layout
+-------------------------------------------------- */
+
+@media (max-width: 767px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+
+  .rightColumn {
+    width: 100%;
+    order: 2;
+  }
+
+  .leftColumn {
+    order: 1;
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "tabs": [
+    {
+      "id": "basics",
+      "items": [
+        {
+          "id": "definite-articles",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "indefinite-articles",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "partitive-articles",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "demonstratives",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "possessives",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "subject-pronouns",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "cest-ce-sont-il-y-a",
+          "level": "A1",
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "vocabulary",
+      "items": [
+        {
+          "id": "greetings",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "numbers",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "family",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "countries-nationalities",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "days-months",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "dates",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "time",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "home",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "food-drinks",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "clothing",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "body",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "city",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "transportation",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "weather",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "leisure",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "opposites",
+          "level": "A1",
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "adjectives",
+      "items": [
+        {
+          "id": "common-adjectives",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "masculine-feminine",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "singular-plural",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "adjective-agreement",
+          "level": "A1",
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "grammar",
+      "items": [
+        {
+          "id": "negation",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "questions",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "question-words",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "prepositions",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "contractions",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "quantities",
+          "level": "A1",
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "conjugation",
+      "items": [
+        {
+          "id": "etre",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "avoir",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "aller",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "faire",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "er-verbs",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "irregular-verbs"
+        },
+        {
+          "id": "common-verbs",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "present",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "near-future",
+          "level": "A1",
+          "status": "available"
+        },
+        {
+          "id": "passe-compose",
+          "level": "A2",
+          "status": "available"
+        }
+      ]
+    }
+  ]
+}

@@ -9,16 +9,30 @@ export default async function Home() {
 
   return (
     <div className={styles.page}>
-      <h1 className='pageTitle'>{t("title")}</h1>
-      <div className='h1SubHead'>{t("description")}</div>
+      <div className={styles.columns}>
+        {/* --------------------------------------------------
+            Left column
+        -------------------------------------------------- */}
 
-      <h2 className='sectionHead'>{t("learningFrench")}</h2>
-      <p className='content'>{t("learningFrenchText1")}</p>
-      <p className='content'>{t("learningFrenchText2")}</p>
+        <div className={styles.leftColumn}>
+          <h1 className='pageTitle'>{t("title")}</h1>
+          <div className='h1SubHead'>{t("description")}</div>
 
-      <h2 className='sectionHead'>{t("howLeQuizHelps")}</h2>
-      <p className='content'>{t("howLeQuizHelpsText1")}</p>
-      <p className='content'>{t("howLeQuizHelpsText2")}</p>
+          <h2 className='sectionHead'>{t("learningFrench")}</h2>
+          <p className='content'>{t("learningFrenchText1")}</p>
+          <p className='content'>{t("learningFrenchText2")}</p>
+
+          <h2 className='sectionHead'>{t("howLeQuizHelps")}</h2>
+          <p className='content'>{t("howLeQuizHelpsText1")}</p>
+          <p className='content'>{t("howLeQuizHelpsText2")}</p>
+        </div>
+
+        {/* --------------------------------------------------
+            Right column
+        -------------------------------------------------- */}
+
+        <div className={styles.rightColumn}>Right content</div>
+      </div>
     </div>
   );
 }

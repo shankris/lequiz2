@@ -1,4 +1,213 @@
 {
   "title": "Pratiquer le français",
-  "subtitle": "Renforcez vos compétences avec des exercices ciblés."
+  "subtitle": "Renforcez vos compétences avec des exercices ciblés.",
+
+  "tabs": {
+    "basics": {
+      "title": "Bases",
+      "description": "Construisez une base solide avec les structures essentielles du français."
+    },
+    "vocabulary": {
+      "title": "Vocabulaire",
+      "description": "Développez votre vocabulaire français grâce à des exercices ciblés."
+    },
+    "adjectives": {
+      "title": "Adjectifs",
+      "description": "Entraînez-vous à décrire les personnes et les choses avec des adjectifs français."
+    },
+    "grammar": {
+      "title": "Grammaire",
+      "description": "Entraînez-vous avec les structures et les règles qui vous aident à former des phrases en français."
+    },
+    "conjugation": {
+      "title": "Conjugaison",
+      "description": "Entraînez-vous avec les verbes français et leurs formes dans les temps les plus courants."
+    }
+  },
+
+  "items": {
+    "definite-articles": {
+      "title": "Articles définis",
+      "subtitle": "le, la, les, l’",
+      "description": "Entraînez-vous à choisir le bon article défini pour chaque nom."
+    },
+    "indefinite-articles": {
+      "title": "Articles indéfinis",
+      "subtitle": "un, une, des",
+      "description": "Entraînez-vous à utiliser les articles indéfinis pour parler de personnes et de choses."
+    },
+    "partitive-articles": {
+      "title": "Articles partitifs",
+      "subtitle": "du, de la, de l’, des",
+      "description": "Entraînez-vous à utiliser les articles partitifs pour parler de quantités non précises."
+    },
+    "demonstratives": {
+      "title": "Démonstratifs",
+      "subtitle": "ce, cet, cette, ces",
+      "description": "Entraînez-vous à utiliser les démonstratifs pour désigner des personnes et des choses."
+    },
+    "possessives": {
+      "title": "Possessifs",
+      "subtitle": "mon, ma, mes...",
+      "description": "Entraînez-vous à utiliser les possessifs pour indiquer à qui appartient quelque chose."
+    },
+    "subject-pronouns": {
+      "title": "Pronoms sujets",
+      "subtitle": "elle, ils, nous, vous",
+      "description": "Entraînez-vous à choisir le bon pronom sujet dans les phrases françaises."
+    },
+    "cest-ce-sont-il-y-a": {
+      "title": "C’est / Ce sont, Il y a",
+      "subtitle": "Structures de phrases courantes",
+      "description": "Entraînez-vous avec certaines des structures de base les plus courantes en français."
+    },
+
+    "greetings": {
+      "title": "Salutations",
+      "description": "Entraînez-vous avec les salutations et expressions courantes du quotidien."
+    },
+    "numbers": {
+      "title": "Nombres",
+      "description": "Entraînez-vous avec les nombres français et leurs utilisations courantes."
+    },
+    "family": {
+      "title": "Famille",
+      "description": "Entraînez-vous avec le vocabulaire pour parler de la famille et des relations."
+    },
+    "countries-nationalities": {
+      "title": "Pays et nationalités",
+      "description": "Entraînez-vous à parler des pays, des nationalités et de l’origine des personnes."
+    },
+    "days-months": {
+      "title": "Jours et mois",
+      "description": "Entraînez-vous avec les jours de la semaine et les mois de l’année."
+    },
+    "dates": {
+      "title": "Dates",
+      "description": "Entraînez-vous à dire et à comprendre les dates en français."
+    },
+    "time": {
+      "title": "Heure",
+      "description": "Entraînez-vous à dire et à comprendre l’heure en français."
+    },
+    "home": {
+      "title": "La maison",
+      "description": "Entraînez-vous avec le vocabulaire des pièces, des objets et de la vie quotidienne à la maison."
+    },
+    "food-drinks": {
+      "title": "Nourriture et boissons",
+      "description": "Entraînez-vous avec le vocabulaire des aliments, des boissons et des repas courants."
+    },
+    "clothing": {
+      "title": "Vêtements",
+      "description": "Entraînez-vous avec le vocabulaire des vêtements et de ce que les gens portent."
+    },
+    "body": {
+      "title": "Corps",
+      "description": "Entraînez-vous avec le vocabulaire des différentes parties du corps."
+    },
+    "city": {
+      "title": "Ville",
+      "description": "Entraînez-vous avec le vocabulaire des lieux et des éléments que l’on trouve en ville."
+    },
+    "transportation": {
+      "title": "Transports",
+      "description": "Entraînez-vous avec le vocabulaire des moyens de transport et des déplacements courants."
+    },
+    "weather": {
+      "title": "Météo",
+      "description": "Entraînez-vous avec le vocabulaire et les expressions pour parler de la météo."
+    },
+    "leisure": {
+      "title": "Loisirs",
+      "description": "Entraînez-vous avec le vocabulaire des loisirs, des activités et du temps libre."
+    },
+    "opposites": {
+      "title": "Contraires",
+      "description": "Entraînez-vous avec des mots français courants ayant des sens opposés."
+    },
+
+    "common-adjectives": {
+      "title": "Adjectifs courants",
+      "description": "Entraînez-vous avec les adjectifs courants utilisés pour décrire les personnes et les choses."
+    },
+    "masculine-feminine": {
+      "title": "Masculin / Féminin",
+      "description": "Entraînez-vous à identifier et à utiliser les formes masculines et féminines."
+    },
+    "singular-plural": {
+      "title": "Singulier / Pluriel",
+      "description": "Entraînez-vous à identifier et à utiliser les formes singulières et plurielles."
+    },
+    "adjective-agreement": {
+      "title": "Accord des adjectifs",
+      "description": "Entraînez-vous à accorder les adjectifs avec les noms qu’ils décrivent."
+    },
+
+    "negation": {
+      "title": "Négation — ne...pas",
+      "description": "Entraînez-vous à former des phrases négatives avec ne...pas."
+    },
+    "questions": {
+      "title": "Questions",
+      "description": "Entraînez-vous à former et à comprendre les questions en français."
+    },
+    "question-words": {
+      "title": "Mots interrogatifs",
+      "description": "Entraînez-vous avec les mots courants utilisés pour poser des questions en français."
+    },
+    "prepositions": {
+      "title": "Prépositions",
+      "description": "Entraînez-vous avec les prépositions françaises courantes et leur utilisation."
+    },
+    "contractions": {
+      "title": "Contractions — au, aux, du, des",
+      "description": "Entraînez-vous avec les contractions françaises courantes formées avec à et de."
+    },
+    "quantities": {
+      "title": "Quantités",
+      "description": "Entraînez-vous avec les mots et expressions utilisés pour parler des quantités."
+    },
+
+    "etre": {
+      "title": "Être",
+      "description": "Entraînez-vous à conjuguer et à utiliser le verbe être."
+    },
+    "avoir": {
+      "title": "Avoir",
+      "description": "Entraînez-vous à conjuguer et à utiliser le verbe avoir."
+    },
+    "aller": {
+      "title": "Aller",
+      "description": "Entraînez-vous à conjuguer et à utiliser le verbe aller."
+    },
+    "faire": {
+      "title": "Faire",
+      "description": "Entraînez-vous à conjuguer et à utiliser le verbe faire."
+    },
+    "er-verbs": {
+      "title": "Verbes en -ER",
+      "description": "Entraînez-vous avec le modèle de conjugaison de base des verbes réguliers en -ER."
+    },
+    "irregular-verbs": {
+      "title": "Verbes irréguliers",
+      "description": "Entraînez-vous aux modèles de conjugaison des verbes français irréguliers courants."
+    },
+    "common-verbs": {
+      "title": "Verbes courants",
+      "description": "Entraînez-vous à conjuguer et à utiliser les verbes français les plus courants."
+    },
+    "present": {
+      "title": "Présent",
+      "description": "Entraînez-vous à utiliser le présent pour parler d’actions et de situations."
+    },
+    "near-future": {
+      "title": "Futur proche",
+      "description": "Entraînez-vous à former et à utiliser le futur proche avec aller."
+    },
+    "passe-compose": {
+      "title": "Passé composé",
+      "description": "Entraînez-vous à former et à utiliser le passé composé pour parler d’actions terminées."
+    }
+  }
 }

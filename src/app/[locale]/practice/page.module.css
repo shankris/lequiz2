@@ -1,0 +1,99 @@
+/* src/app/[local]/practice/page.module.css */
+
+/* --------------------------------------------------
+   Practice Tab Content
+-------------------------------------------------- */
+
+.practiceTabContent {
+  width: 100%;
+}
+
+.practiceTabDescription {
+  margin: 0 0 20px;
+
+  color: var(--mutedColor);
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* --------------------------------------------------
+   Practice Cards
+-------------------------------------------------- */
+
+.practiceCards {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+.practiceCard {
+  display: block;
+
+  padding: 10px;
+
+  border: 1px solid var(--borderColor);
+  border-radius: 6px;
+
+  background: var(--surfaceColor);
+
+  color: inherit;
+  text-decoration: none;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.practiceCard:hover {
+  border-color: var(--focusColor);
+
+  background-color: var(--card1bg);
+
+  transform: translateY(-1px);
+}
+
+.practiceCard h3 {
+  margin: 0;
+
+  color: var(--headingCol);
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.practiceCardSubtitle {
+  margin-top: 4px;
+
+  color: var(--mutedColor);
+
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.practiceCard p {
+  margin: 2px 0 0;
+  color: var(--mutedColor);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* --------------------------------------------------
+   Practice Cards — Mobile
+-------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .practiceCards {
+    grid-template-columns: 1fr;
+  }
+
+  .practiceCard {
+    padding: 16px;
+  }
+}

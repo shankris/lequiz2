@@ -1,0 +1,117 @@
+/* src/components/layout/ui/tabs/Tabs.module.css */
+
+/* --------------------------------------------------
+   Container
+-------------------------------------------------- */
+
+.container {
+  width: 100%;
+  margin: 40px 0 0 0;
+}
+
+
+/* --------------------------------------------------
+   Tabs
+-------------------------------------------------- */
+
+.materialTabs {
+  /* display: flex; */
+  width: 100%;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--borderColor);
+  scrollbar-width: none;
+}
+
+.materialTabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  position: relative;
+
+  flex: 1 0 auto;
+
+  padding: 12px 20px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--txtColor);
+
+  text-align: center;
+  text-transform: uppercase;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 300;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  outline: none;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.tab.active {
+  font-weight: 700;
+}
+
+.tab:not(.active):hover {
+  background-color: transparent;
+  color: var(--mutedColor);
+}
+
+
+/* --------------------------------------------------
+   Active indicator
+-------------------------------------------------- */
+
+.yellowBar {
+  position: absolute;
+
+  z-index: 10;
+
+  right: 0;
+  bottom: -1px;
+  left: 0;
+
+  height: 3px;
+
+  background: var(--focusColor);
+
+  pointer-events: none;
+}
+
+
+/* --------------------------------------------------
+   Tab content
+-------------------------------------------------- */
+
+.tabContent {
+  padding: 20px 0 15px;
+}
+
+
+/* --------------------------------------------------
+   Responsive
+-------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .tab {
+    padding: 16px 12px;
+    font-size: 14px;
+  }
+
+  .tabContent {
+    padding: 20px 0 15px;
+  }
+}
