@@ -1,4 +1,12 @@
 {
-  "title": "Welcome to Le Quiz",
-  "description": "Learn and practice French."
+  "title": "Le Quiz",
+  "description": "Practice and reinforce your French, one step at a time.",
+
+  "learningFrench": "Learning French",
+  "learningFrenchText1": "Much of learning French involves remembering and recalling what you have learned. Le Quiz helps you do this through repeated practice and reinforcement.",
+  "learningFrenchText2": "Learning a language takes time, and regular practice is more useful than trying to learn everything at once. Le Quiz gives you short, focused sessions that you can fit into your day, helping you build your French skills little by little.",
+
+  "howLeQuizHelps": "How Le Quiz Helps",
+  "howLeQuizHelpsText1": "Questions will be revisited every few days, helping you reinforce what you have learned and remember it for longer. As you practice, you can track your progress through your accuracy and reaction time, giving you another way to see how your skills are developing.",
+  "howLeQuizHelpsText2": "Le Quiz complements your other ways of learning French, whether you're learning in a classroom, online, with a teacher, or by yourself. Use it to practice and reinforce what you learn along the way."
 }

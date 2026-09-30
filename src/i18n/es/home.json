@@ -1,4 +1,10 @@
 {
-  "title": "Bienvenido a Le Quiz",
-  "description": "Aprende y practica francés."
+  "title": "Le Quiz",
+  "description": "Practica y refuerza tu francés, paso a paso.",
+  "learningFrench": "Aprender francés",
+  "learningFrenchText1": "Una gran parte de aprender francés consiste en recordar y recuperar lo que has aprendido. Le Quiz te ayuda a hacerlo mediante la práctica repetida y el refuerzo de los conocimientos.",
+  "learningFrenchText2": "Aprender un idioma lleva tiempo, y practicar con regularidad es más útil que intentar aprenderlo todo de una vez. Le Quiz te ofrece sesiones cortas y enfocadas que puedes integrar en tu día a día, ayudándote a desarrollar tus conocimientos de francés poco a poco.",
+  "howLeQuizHelps": "Cómo te ayuda Le Quiz",
+  "howLeQuizHelpsText1": "Las preguntas se vuelven a presentar cada pocos días, lo que te ayuda a reforzar lo que has aprendido y a recordarlo durante más tiempo. A medida que practicas, puedes seguir tu progreso a través de tu precisión y tiempo de reacción, lo que te ofrece otra forma de ver cómo se desarrollan tus conocimientos.",
+  "howLeQuizHelpsText2": "Le Quiz complementa tus otras formas de aprender francés, ya sea que estudies en clase, en línea, con un profesor o por tu cuenta. Úsalo para practicar y reforzar lo que vas aprendiendo."
 }

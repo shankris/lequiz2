@@ -1,4 +1,10 @@
 {
-  "title": "Bienvenue sur Le Quiz",
-  "description": "Apprenez et pratiquez le français."
+  "title": "Le Quiz",
+  "description": "Pratiquez et renforcez votre français, une étape à la fois.",
+  "learningFrench": "Apprendre le français",
+  "learningFrenchText1": "Une grande partie de l’apprentissage du français consiste à mémoriser et à se rappeler ce que vous avez appris. Le Quiz vous aide à le faire grâce à une pratique régulière et au renforcement des connaissances.",
+  "learningFrenchText2": "Apprendre une langue demande du temps, et une pratique régulière est plus utile que d’essayer de tout apprendre en une seule fois. Le Quiz vous propose des séances courtes et ciblées que vous pouvez intégrer à votre journée, pour vous aider à développer vos compétences en français petit à petit.",
+  "howLeQuizHelps": "Comment Le Quiz vous aide",
+  "howLeQuizHelpsText1": "Les questions sont revisitées tous les quelques jours, afin de vous aider à renforcer ce que vous avez appris et à mieux vous en souvenir au fil du temps. À mesure que vous pratiquez, vous pouvez suivre vos progrès grâce à votre précision et à votre temps de réaction, ce qui vous donne une autre façon de voir l’évolution de vos compétences.",
+  "howLeQuizHelpsText2": "Le Quiz complète vos autres façons d’apprendre le français, que vous appreniez en classe, en ligne, avec un professeur ou par vous-même. Utilisez-le pour pratiquer et renforcer ce que vous apprenez au fur et à mesure."
 }
