@@ -2,9 +2,10 @@
 
 "use client";
 
-import { Link } from "@/i18n/navigation";
-import { House, BookOpen, SquareCheckBig, ChartNoAxesColumn } from "lucide-react";
+import { ChartNoAxesColumn, BookOpen, House, SquareCheckBig } from "lucide-react";
 import { useTranslations } from "next-intl";
+
+import { Link, usePathname } from "@/i18n/navigation";
 
 import navigation from "./navigation.json";
 import styles from "./Navigation.module.css";
@@ -26,6 +27,7 @@ const icons = {
 
 export default function Navigation({ variant = "desktop" }) {
   const t = useTranslations("navigation");
+  const pathname = usePathname();
 
   return (
     <nav
@@ -35,11 +37,14 @@ export default function Navigation({ variant = "desktop" }) {
       {navigation.map((item) => {
         const Icon = icons[item.icon];
 
+        const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(`${item.href}/`));
+
         return (
           <Link
             key={item.href}
             href={item.href}
-            className={styles.navItem}
+            className={`${styles.navItem} ${isActive ? styles.active : ""}`}
+            aria-current={isActive ? "page" : undefined}
           >
             <Icon
               className={styles.icon}

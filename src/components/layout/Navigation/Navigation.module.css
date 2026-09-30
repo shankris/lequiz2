@@ -19,7 +19,7 @@
   transition:
     color 0.2s ease,
     background-color 0.2s ease;
-
+  height: 100%;
   padding: 4px 6px 0;
   text-transform: uppercase;
   font-weight: 300;
@@ -27,7 +27,7 @@
 }
 
 .navItem:hover {
-  color: var(--accentColor);
+  background-color: var(--surfaceColor);
 }
 
 .icon {
@@ -110,9 +110,28 @@
     font-size: 11px;
   }
 
-  .mobileNavigation .navItem:hover {
+  .mobileNavigation .navItem:active {
     background-color: var(--mainContentBg);
   }
+}
 
+/* --------------------------------------------------
+   Active Navigation Item
+-------------------------------------------------- */
 
+.navItem.active {
+  text-decoration: none;
+  color: var(--accentColor);
+
+}
+
+.desktopNavigation .navItem.active {
+  background-color: var(--surfaceColor);
+  font-weight: 500;
+  background-color: rgb(255 255 255 / 30%);
+}
+
+.mobileNavigation .navItem.active {
+  color: var(--accentColor);
+  background-color: var(--mainContentBg);
 }
