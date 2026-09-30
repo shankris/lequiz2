@@ -1,21 +1,21 @@
 [
   {
-    "label": "Home",
+    "key": "home",
     "href": "/",
     "icon": "House"
   },
   {
-    "label": "Learn",
+    "key": "learn",
     "href": "/learn",
     "icon": "BookOpen"
   },
   {
-    "label": "Practice",
+    "key": "practice",
     "href": "/practice",
-    "icon": "Pencil"
+    "icon": "SquareCheckBig"
   },
   {
-    "label": "Progress",
+    "key": "progress",
     "href": "/progress",
     "icon": "ChartNoAxesColumn"
   }

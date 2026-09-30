@@ -7,17 +7,23 @@
 .navigation {
   display: flex;
   align-items: center;
+  margin: 0;
 }
 
 .navItem {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 0px;
   color: var(--textColor);
   text-decoration: none;
   transition:
     color 0.2s ease,
     background-color 0.2s ease;
+
+  padding: 4px 6px 0;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 14px;
 }
 
 .navItem:hover {
@@ -45,8 +51,8 @@
 }
 
 .desktopNavigation .navItem {
-  padding: 7px 10px;
-  border-radius: 6px;
+  padding: 2px 10px;
+  border-radius: 2px;
 }
 
 .desktopNavigation .navItem:hover {
@@ -79,11 +85,8 @@
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-
     height: 58px;
-
-    padding: 4px 8px;
-
+    /* padding: 4px 8px; */
     background-color: var(--surfaceColor);
     border-top: 1px solid var(--borderColor);
   }
@@ -91,10 +94,10 @@
   .mobileNavigation .navItem {
     flex-direction: column;
     justify-content: center;
-    gap: 2px;
-
+    /* gap: 2px; */
+    text-transform: capitalize;
     min-width: 0;
-    border-radius: 6px;
+    /* border-radius: 6px; */
   }
 
   .mobileNavigation .icon {
@@ -110,4 +113,6 @@
   .mobileNavigation .navItem:hover {
     background-color: var(--mainContentBg);
   }
+
+
 }
