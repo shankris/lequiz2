@@ -2,6 +2,8 @@
 
 import { getTranslations } from "next-intl/server";
 
+import LearningNotesIndex from "@/components/learn/LearningNotesIndex";
+
 import styles from "../page.module.css";
 
 export default async function LearnPage() {
@@ -11,6 +13,8 @@ export default async function LearnPage() {
     <div className={styles.page}>
       <h1 className='pageTitle'>{t("title")}</h1>
       <div className='h1SubHead'>{t("subtitle")}</div>
+
+      <LearningNotesIndex />
     </div>
   );
 }

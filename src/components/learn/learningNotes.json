@@ -1,0 +1,277 @@
+{
+  "notes": [
+    {
+      "order": 1,
+      "slug": "noun-gender",
+      "title": "Determining the Gender of French Nouns",
+      "description": "Learn how to identify and remember whether French nouns are masculine or feminine.",
+      "category": "grammar",
+      "status": "available",
+      "component": "NounGender"
+    },
+    {
+      "order": 2,
+      "slug": "masculine-and-feminine",
+      "title": "Masculine and Feminine Forms",
+      "description": "Explore how French words change to express masculine and feminine forms.",
+      "category": "grammar",
+      "status": "planned"
+    },
+    {
+      "order": 3,
+      "slug": "singular-and-plural",
+      "title": "Singular and Plural Forms",
+      "description": "Learn how French nouns and related words change between singular and plural.",
+      "category": "grammar",
+      "status": "planned"
+    },
+    {
+      "order": 4,
+      "slug": "country-gender-and-prepositions",
+      "title": "Gender and Prepositions of Countries",
+      "description": "Learn the gender of country names and how to use en, au, aux and other prepositions with them.",
+      "category": "grammar",
+      "status": "planned"
+    },
+    {
+      "order": 5,
+      "slug": "definite-articles",
+      "title": "French Definite Articles",
+      "description": "Understand when to use le, la, les and l' with French nouns.",
+      "category": "grammar",
+      "status": "comingSoon"
+    },
+    {
+      "order": 6,
+      "slug": "indefinite-articles",
+      "title": "French Indefinite Articles",
+      "description": "Learn how un, une and des are used when referring to people and things.",
+      "category": "grammar",
+      "status": "comingSoon"
+    },
+    {
+      "order": 7,
+      "slug": "partitive-articles",
+      "title": "French Partitive Articles",
+      "description": "Learn how du, de la, de l' and des are used with uncountable quantities.",
+      "category": "grammar",
+      "status": "comingSoon"
+    },
+    {
+      "order": 8,
+      "slug": "demonstrative-adjectives",
+      "title": "Demonstrative Adjectives",
+      "description": "Learn how ce, cet, cette and ces are used to point out people and things.",
+      "category": "grammar",
+      "status": "comingSoon"
+    },
+    {
+      "order": 9,
+      "slug": "possessive-adjectives",
+      "title": "Possessive Adjectives",
+      "description": "Understand how mon, ma, mes and other possessive adjectives agree with nouns.",
+      "category": "grammar",
+      "status": "comingSoon"
+    },
+    {
+      "order": 10,
+      "slug": "subject-pronouns",
+      "title": "French Subject Pronouns",
+      "description": "Learn the subject pronouns used to identify who is performing an action.",
+      "category": "grammar",
+      "status": "comingSoon"
+    },
+    {
+      "order": 11,
+      "slug": "adjective-agreement",
+      "title": "Adjective Agreement",
+      "description": "Learn how French adjectives agree with nouns in gender and number.",
+      "category": "grammar",
+      "status": "planned"
+    },
+    {
+      "order": 12,
+      "slug": "cest-ce-sont",
+      "title": "C'est and Ce sont",
+      "description": "Learn when to use c'est and ce sont to identify and describe people and things.",
+      "category": "grammar",
+      "status": "planned"
+    },
+    {
+      "order": 13,
+      "slug": "il-y-a",
+      "title": "Il y a",
+      "description": "Learn how to use il y a to say that something exists or is present.",
+      "category": "grammar",
+      "status": "planned"
+    },
+    {
+      "order": 14,
+      "slug": "negation",
+      "title": "Negation in French",
+      "description": "Learn how to form negative sentences using ne, pas and other negative expressions.",
+      "category": "grammar",
+      "status": "planned"
+    },
+    {
+      "order": 15,
+      "slug": "asking-questions",
+      "title": "Asking Questions in French",
+      "description": "Learn the main ways to form questions in everyday French.",
+      "category": "grammar",
+      "status": "planned"
+    },
+    {
+      "order": 16,
+      "slug": "question-words",
+      "title": "French Question Words",
+      "description": "Learn how qui, que, quoi, où, quand, pourquoi and comment are used in questions.",
+      "category": "grammar",
+      "status": "planned"
+    },
+    {
+      "order": 17,
+      "slug": "prepositions",
+      "title": "Common French Prepositions",
+      "description": "Learn common prepositions and how they are used to connect words and express relationships.",
+      "category": "grammar",
+      "status": "planned"
+    },
+    {
+      "order": 18,
+      "slug": "common-contractions",
+      "title": "Common French Contractions",
+      "description": "Understand common contractions such as au, aux, du and des.",
+      "category": "grammar",
+      "status": "planned"
+    },
+    {
+      "order": 19,
+      "slug": "quantities",
+      "title": "Expressing Quantities",
+      "description": "Learn how to talk about amounts and quantities using common French expressions.",
+      "category": "grammar",
+      "status": "planned"
+    },
+    {
+      "order": 20,
+      "slug": "etre",
+      "title": "The Verb Être",
+      "description": "Learn the forms and everyday uses of the essential French verb être.",
+      "category": "conjugation",
+      "status": "planned"
+    },
+    {
+      "order": 21,
+      "slug": "avoir",
+      "title": "The Verb Avoir",
+      "description": "Learn the forms and everyday uses of the essential French verb avoir.",
+      "category": "conjugation",
+      "status": "planned"
+    },
+    {
+      "order": 22,
+      "slug": "aller",
+      "title": "The Verb Aller",
+      "description": "Learn the forms and common uses of aller, including its role in the near future.",
+      "category": "conjugation",
+      "status": "planned"
+    },
+    {
+      "order": 23,
+      "slug": "faire",
+      "title": "The Verb Faire",
+      "description": "Learn the forms and common expressions built around the verb faire.",
+      "category": "conjugation",
+      "status": "planned"
+    },
+    {
+      "order": 24,
+      "slug": "er-verbs",
+      "title": "Regular -ER Verbs",
+      "description": "Learn the basic pattern for conjugating regular French verbs ending in -er.",
+      "category": "conjugation",
+      "status": "planned"
+    },
+    {
+      "order": 25,
+      "slug": "irregular-verbs",
+      "title": "Common Irregular Verbs",
+      "description": "Build familiarity with frequently used French verbs that do not follow regular patterns.",
+      "category": "conjugation",
+      "status": "planned"
+    },
+    {
+      "order": 26,
+      "slug": "present-tense",
+      "title": "The Present Tense",
+      "description": "Understand how French uses the present tense to talk about actions and situations.",
+      "category": "conjugation",
+      "status": "planned"
+    },
+    {
+      "order": 27,
+      "slug": "near-future",
+      "title": "The Near Future",
+      "description": "Learn how to talk about future actions using the French near-future construction.",
+      "category": "conjugation",
+      "status": "planned"
+    },
+    {
+      "order": 28,
+      "slug": "passe-compose",
+      "title": "The Passé Composé",
+      "description": "Learn how to form and use the passé composé to talk about completed past actions.",
+      "category": "conjugation",
+      "status": "planned"
+    },
+    {
+      "order": 29,
+      "slug": "common-greetings",
+      "title": "Common French Greetings",
+      "description": "Learn useful greetings and expressions for everyday French conversations.",
+      "category": "vocabulary",
+      "status": "planned"
+    },
+    {
+      "order": 30,
+      "slug": "numbers",
+      "title": "French Numbers",
+      "description": "Learn the numbers and patterns you need for everyday situations in French.",
+      "category": "vocabulary",
+      "status": "planned"
+    },
+    {
+      "order": 31,
+      "slug": "days-and-months",
+      "title": "Days, Months and Dates",
+      "description": "Learn the French words and expressions used for days, months and dates.",
+      "category": "vocabulary",
+      "status": "planned"
+    },
+    {
+      "order": 32,
+      "slug": "time",
+      "title": "Telling the Time",
+      "description": "Learn how to ask for and tell the time in French.",
+      "category": "vocabulary",
+      "status": "planned"
+    },
+    {
+      "order": 33,
+      "slug": "countries-and-nationalities",
+      "title": "Countries and Nationalities",
+      "description": "Build vocabulary for countries, nationalities and the words used to describe where people come from.",
+      "category": "vocabulary",
+      "status": "planned"
+    },
+    {
+      "order": 34,
+      "slug": "food-and-drinks",
+      "title": "Food and Drinks",
+      "description": "Learn useful French vocabulary for common foods, drinks and everyday meals.",
+      "category": "vocabulary",
+      "status": "planned"
+    }
+  ]
+}

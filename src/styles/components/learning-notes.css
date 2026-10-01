@@ -1,0 +1,220 @@
+/* src/styles/components/learning-notes.css */
+
+/* --------------------------------------------------
+   Learning Notes
+-------------------------------------------------- */
+
+.learningNote {
+  width: 100%;
+  max-width: 800px;
+
+  color: var(--textColor);
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* --------------------------------------------------
+   Learning Note — Headings
+-------------------------------------------------- */
+
+.learningNote h2 {
+  margin: 0 0 20px;
+
+  color: var(--headingCol);
+
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.learningNote h3 {
+  margin: 32px 0 12px;
+
+  color: var(--headingCol);
+
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+
+/* --------------------------------------------------
+   Learning Note — Paragraphs
+-------------------------------------------------- */
+
+.learningNote p {
+  margin: 0 0 16px;
+}
+
+
+/* --------------------------------------------------
+   Learning Note — Lists
+-------------------------------------------------- */
+
+.learningNote ul {
+  margin: 0 0 18px;
+  padding-left: 24px;
+}
+
+.learningNote li {
+  margin-bottom: 6px;
+  padding-left: 4px;
+}
+
+
+/* --------------------------------------------------
+   Learning Note — Emphasis
+-------------------------------------------------- */
+
+.learningNote strong {
+  font-weight: 600;
+}
+
+.learningNote em {
+  font-style: italic;
+}
+
+
+/* --------------------------------------------------
+   Learning Note — Key Point
+-------------------------------------------------- */
+
+.learningNote blockquote {
+  margin: 24px 0;
+  padding: 14px 18px;
+
+  border-left: 3px solid var(--accentColor);
+
+  background-color: var(--surfaceColor);
+
+  color: var(--headingCol);
+
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+/* --------------------------------------------------
+   Learning Note — Mobile
+-------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .learningNote {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .learningNote h2 {
+    font-size: 20px;
+  }
+
+  .learningNote h3 {
+    margin-top: 28px;
+
+    font-size: 17px;
+  }
+
+  .learningNote blockquote {
+    padding: 12px 15px;
+  }
+}
+
+
+/* --------------------------------------------------
+   Learning Notes — Index
+-------------------------------------------------- */
+
+.learningNotesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.learningNoteCard {
+  display: block;
+  min-width: 0;
+  padding: 18px 20px;
+  border: 1px solid var(--borderColor);
+  border-radius: 5px;
+  background-color: var(--surfaceColor);
+  color: var(--textColor);
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.learningNoteCard:hover {
+  border-color: var(--accentColor);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+}
+
+.learningNoteCardDisabled {
+  opacity: 0.65;
+}
+
+/* --------------------------------------------------
+   Learning Notes — Card Header
+-------------------------------------------------- */
+
+.learningNoteHeader h3 {
+  margin: 0;
+  color: var(--headingCol);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* --------------------------------------------------
+   Learning Notes — Description
+-------------------------------------------------- */
+
+.learningNoteDescription {
+  margin: 8px 0 0;
+  color: var(--textColor);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* --------------------------------------------------
+   Learning Notes — Metadata
+-------------------------------------------------- */
+
+.learningNoteMeta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 14px;
+  color: var(--mutedColor);
+  font-size: 11px;
+}
+
+/* --------------------------------------------------
+   Learning Notes — Mobile
+-------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .learningNotesGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .learningNoteCard {
+    padding: 16px 18px;
+  }
+
+  .learningNoteHeader h3 {
+    font-size: 15px;
+  }
+
+  .learningNoteDescription {
+    font-size: 12px;
+  }
+}
