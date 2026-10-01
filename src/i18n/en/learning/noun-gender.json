@@ -1,0 +1,77 @@
+{
+  "title": "Gender of French Nouns",
+  "intro1": "In French, every noun is either masculine or feminine. This applies to people, animals, objects, places, and ideas. So even something like a washing machine has a grammatical gender in French.",
+  "intro2": "There is no single rule that tells you the gender of every noun, but the ending of a noun often provides a useful clue. Learning these patterns can help you make a good first guess when you encounter a new word.",
+  "articleExamplesIntro": "Sometimes, however, the article does not reveal the gender of the noun. For example:",
+  "articleExamples": {
+    "water": "feminine, but the article does not reveal the gender.",
+    "hotel": "masculine, but the article does not reveal the gender.",
+    "plural": "the plural article does not reveal the gender."
+  },
+  "articleConclusion": "This is why it is important to learn the gender of a noun rather than relying only on its article when you encounter it in a sentence.",
+  "quote": "Don't just learn the noun — learn its gender with it.",
+  "importance": "Knowing the gender is important because it affects other parts of the language. Articles change according to gender, and adjectives must agree with the noun. Pronouns and some other words also depend on whether the noun is masculine or feminine. Learning the gender when you learn a new noun will therefore make it easier to form correct sentences later.",
+  "feminine": {
+    "title": "Feminine Nouns",
+    "tionIntro": "Nouns ending in -tion are almost always feminine:",
+    "sionIntro": "Nouns ending in -sion are also almost always feminine:",
+    "teIntro": "Nouns ending in -té are generally feminine:",
+    "exceptionsIntro": "There are some important exceptions, including:"
+  },
+  "masculine": {
+    "title": "Masculine Nouns",
+    "ageIntro": "Nouns ending in -age are generally masculine:",
+    "ageExceptionsIntro": "However, some common exceptions are feminine:",
+    "mentIntro": "Nouns ending in -ment are generally masculine:",
+    "mentConclusion": "There are exceptions, so this ending should be treated as a useful pattern rather than an absolute rule.",
+    "eauIntro": "Nouns ending in -eau are generally masculine:",
+    "eauExceptionsIntro": "Two important exceptions are:"
+  },
+
+  "habit": {
+    "title": "A Useful Habit",
+    "intro": "When learning a new French noun, learn the article together with the noun.",
+    "exampleTable": "For example, learn",
+    "exampleTableEnd": "rather than just",
+    "exampleBook": "Similarly, learn",
+    "exampleBookEnd": "rather than just",
+    "conclusion": "The more nouns you learn this way, the more naturally their gender becomes part of your vocabulary."
+  },
+  "conclusion": "The more nouns you learn this way, the more naturally their gender becomes part of your vocabulary.",
+  "words": {
+    "water": "water",
+    "hotel": "hotel",
+    "cars": "cars",
+    "books": "books",
+    "nation": "nation",
+    "situation": "situation",
+    "conversation": "conversation",
+    "decision": "decision",
+    "television": "television",
+    "discussion": "discussion",
+    "freedom": "freedom",
+    "quality": "quality",
+    "possibility": "possibility",
+    "committee": "committee",
+    "side": "side",
+    "village": "village",
+    "trip": "trip",
+    "cheese": "cheese",
+    "page": "page",
+    "cage": "cage",
+    "beach": "beach",
+    "image": "image",
+    "swimming": "swimming",
+    "rage": "rage",
+    "government": "government",
+    "movement": "movement",
+    "building": "building",
+    "office": "office",
+    "castle": "castle",
+    "gift": "gift",
+    "skin": "skin",
+    "table": "table",
+    "book": "book",
+    "washingMachine": "a washing machine"
+  }
+}
