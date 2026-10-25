@@ -1,0 +1,731 @@
+[
+  {
+    "word": "homme",
+    "translation": "man",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "The man is here."
+      },
+      {
+        "id": 2,
+        "text": "The man is my father."
+      },
+      {
+        "id": 3,
+        "text": "I know this man."
+      },
+      {
+        "id": 4,
+        "text": "The man lives here."
+      },
+      {
+        "id": 5,
+        "text": "He is a kind man."
+      }
+    ],
+    "distractors": ["woman", "child", "friend"]
+  },
+  {
+    "word": "femme",
+    "translation": "woman",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "The woman is here."
+      },
+      {
+        "id": 2,
+        "text": "The woman is my mother."
+      },
+      {
+        "id": 3,
+        "text": "I know this woman."
+      },
+      {
+        "id": 4,
+        "text": "The woman lives here."
+      },
+      {
+        "id": 5,
+        "text": "She is a kind woman."
+      }
+    ],
+    "distractors": ["man", "girl", "friend"]
+  },
+  {
+    "word": "enfant",
+    "translation": "child",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "The child is playing."
+      },
+      {
+        "id": 2,
+        "text": "The child is in the house."
+      },
+      {
+        "id": 3,
+        "text": "It is a small child."
+      },
+      {
+        "id": 4,
+        "text": "The child is eating an apple."
+      },
+      {
+        "id": 5,
+        "text": "The child is with his mother."
+      }
+    ],
+    "distractors": ["father", "house", "friend"]
+  },
+  {
+    "word": "garçon",
+    "translation": "boy",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "The boy is playing."
+      },
+      {
+        "id": 2,
+        "text": "The boy is my brother."
+      },
+      {
+        "id": 3,
+        "text": "I see the boy."
+      },
+      {
+        "id": 4,
+        "text": "The boy is eating an apple."
+      },
+      {
+        "id": 5,
+        "text": "The boy is in his room."
+      }
+    ],
+    "distractors": ["girl", "man", "father"]
+  },
+  {
+    "word": "fille",
+    "translation": "girl",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "The girl is playing."
+      },
+      {
+        "id": 2,
+        "text": "The girl is my sister."
+      },
+      {
+        "id": 3,
+        "text": "I see the girl."
+      },
+      {
+        "id": 4,
+        "text": "The girl is eating an apple."
+      },
+      {
+        "id": 5,
+        "text": "The girl is in her room."
+      }
+    ],
+    "distractors": ["boy", "woman", "mother"]
+  },
+  {
+    "word": "père",
+    "translation": "father",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "My father is here."
+      },
+      {
+        "id": 2,
+        "text": "My father works."
+      },
+      {
+        "id": 3,
+        "text": "I talk with my father."
+      },
+      {
+        "id": 4,
+        "text": "My father likes coffee."
+      },
+      {
+        "id": 5,
+        "text": "My father is in the house."
+      }
+    ],
+    "distractors": ["mother", "brother", "friend"]
+  },
+  {
+    "word": "mère",
+    "translation": "mother",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "My mother is here."
+      },
+      {
+        "id": 2,
+        "text": "My mother works."
+      },
+      {
+        "id": 3,
+        "text": "I talk with my mother."
+      },
+      {
+        "id": 4,
+        "text": "My mother likes coffee."
+      },
+      {
+        "id": 5,
+        "text": "My mother is in the house."
+      }
+    ],
+    "distractors": ["father", "sister", "friend"]
+  },
+  {
+    "word": "ami",
+    "translation": "friend",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "My friend is here."
+      },
+      {
+        "id": 2,
+        "text": "My friend lives here."
+      },
+      {
+        "id": 3,
+        "text": "I talk with my friend."
+      },
+      {
+        "id": 4,
+        "text": "My friend likes coffee."
+      },
+      {
+        "id": 5,
+        "text": "I am going to my friend's house."
+      }
+    ],
+    "distractors": ["family", "father", "brother"]
+  },
+  {
+    "word": "amie",
+    "translation": "female friend",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "My friend is here."
+      },
+      {
+        "id": 2,
+        "text": "My friend lives here."
+      },
+      {
+        "id": 3,
+        "text": "I talk with my friend."
+      },
+      {
+        "id": 4,
+        "text": "My friend likes coffee."
+      },
+      {
+        "id": 5,
+        "text": "I am going to my friend's house."
+      }
+    ],
+    "distractors": ["brother", "father", "boy"]
+  },
+  {
+    "word": "amis",
+    "translation": "friends",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "My friends are here."
+      },
+      {
+        "id": 2,
+        "text": "My friends live here."
+      },
+      {
+        "id": 3,
+        "text": "I talk with my friends."
+      },
+      {
+        "id": 4,
+        "text": "My friends like coffee."
+      },
+      {
+        "id": 5,
+        "text": "I am going to my friends' house."
+      }
+    ],
+    "distractors": ["family", "father", "brother"]
+  },
+  {
+    "word": "amies",
+    "translation": "female friends",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "My friends are here."
+      },
+      {
+        "id": 2,
+        "text": "My friends live here."
+      },
+      {
+        "id": 3,
+        "text": "I talk with my friends."
+      },
+      {
+        "id": 4,
+        "text": "My friends like coffee."
+      },
+      {
+        "id": 5,
+        "text": "I am going to my friends' house."
+      }
+    ],
+    "distractors": ["brother", "father", "boy"]
+  },
+  {
+    "word": "famille",
+    "translation": "family",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "My family is here."
+      },
+      {
+        "id": 2,
+        "text": "I love my family."
+      },
+      {
+        "id": 3,
+        "text": "My family lives here."
+      },
+      {
+        "id": 4,
+        "text": "My family is large."
+      },
+      {
+        "id": 5,
+        "text": "I talk with my family."
+      }
+    ],
+    "distractors": ["house", "friend", "mother"]
+  },
+  {
+    "word": "maison",
+    "translation": "house",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "The house is big."
+      },
+      {
+        "id": 2,
+        "text": "I live in a house."
+      },
+      {
+        "id": 3,
+        "text": "The house is here."
+      },
+      {
+        "id": 4,
+        "text": "My house is beautiful."
+      },
+      {
+        "id": 5,
+        "text": "I am going home."
+      }
+    ],
+    "distractors": ["room", "table", "chair"]
+  },
+  {
+    "word": "chambre",
+    "translation": "room",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "My room is big."
+      },
+      {
+        "id": 2,
+        "text": "I am in my room."
+      },
+      {
+        "id": 3,
+        "text": "The room is clean."
+      },
+      {
+        "id": 4,
+        "text": "My room is here."
+      },
+      {
+        "id": 5,
+        "text": "I am going to my room."
+      }
+    ],
+    "distractors": ["house", "table", "chair"]
+  },
+  {
+    "word": "table",
+    "translation": "table",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "The table is here."
+      },
+      {
+        "id": 2,
+        "text": "The book is on the table."
+      },
+      {
+        "id": 3,
+        "text": "I am at the table."
+      },
+      {
+        "id": 4,
+        "text": "The table is big."
+      },
+      {
+        "id": 5,
+        "text": "I am cleaning the table."
+      }
+    ],
+    "distractors": ["chair", "book", "room"]
+  },
+  {
+    "word": "chaise",
+    "translation": "chair",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "The chair is here."
+      },
+      {
+        "id": 2,
+        "text": "I am sitting on a chair."
+      },
+      {
+        "id": 3,
+        "text": "The chair is near the table."
+      },
+      {
+        "id": 4,
+        "text": "This chair is big."
+      },
+      {
+        "id": 5,
+        "text": "I take a chair."
+      }
+    ],
+    "distractors": ["table", "room", "house"]
+  },
+  {
+    "word": "livre",
+    "translation": "book",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "The book is on the table."
+      },
+      {
+        "id": 2,
+        "text": "I am reading a book."
+      },
+      {
+        "id": 3,
+        "text": "This book is interesting."
+      },
+      {
+        "id": 4,
+        "text": "The book is in my room."
+      },
+      {
+        "id": 5,
+        "text": "I like this book."
+      }
+    ],
+    "distractors": ["table", "chair", "house"]
+  },
+  {
+    "word": "eau",
+    "translation": "water",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "I drink water."
+      },
+      {
+        "id": 2,
+        "text": "The water is cold."
+      },
+      {
+        "id": 3,
+        "text": "I want water."
+      },
+      {
+        "id": 4,
+        "text": "The water is on the table."
+      },
+      {
+        "id": 5,
+        "text": "There is water here."
+      }
+    ],
+    "distractors": ["milk", "coffee", "bread"]
+  },
+  {
+    "word": "pain",
+    "translation": "bread",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "I eat bread."
+      },
+      {
+        "id": 2,
+        "text": "The bread is good."
+      },
+      {
+        "id": 3,
+        "text": "I buy bread."
+      },
+      {
+        "id": 4,
+        "text": "The bread is on the table."
+      },
+      {
+        "id": 5,
+        "text": "I want bread."
+      }
+    ],
+    "distractors": ["milk", "water", "apple"]
+  },
+  {
+    "word": "lait",
+    "translation": "milk",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "I drink milk."
+      },
+      {
+        "id": 2,
+        "text": "The milk is cold."
+      },
+      {
+        "id": 3,
+        "text": "I buy milk."
+      },
+      {
+        "id": 4,
+        "text": "The milk is in the kitchen."
+      },
+      {
+        "id": 5,
+        "text": "I want milk."
+      }
+    ],
+    "distractors": ["water", "coffee", "bread"]
+  },
+  {
+    "word": "pomme",
+    "translation": "apple",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "The apple is red."
+      },
+      {
+        "id": 2,
+        "text": "I eat an apple."
+      },
+      {
+        "id": 3,
+        "text": "I like this apple."
+      },
+      {
+        "id": 4,
+        "text": "The apple is on the table."
+      },
+      {
+        "id": 5,
+        "text": "I want an apple."
+      }
+    ],
+    "distractors": ["bread", "milk", "coffee"]
+  },
+  {
+    "word": "café",
+    "translation": "coffee",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "I drink coffee."
+      },
+      {
+        "id": 2,
+        "text": "The coffee is hot."
+      },
+      {
+        "id": 3,
+        "text": "I like coffee."
+      },
+      {
+        "id": 4,
+        "text": "The coffee is on the table."
+      },
+      {
+        "id": 5,
+        "text": "I want a coffee."
+      }
+    ],
+    "distractors": ["tea", "milk", "water"]
+  },
+  {
+    "word": "être",
+    "translation": "to be",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "I am here."
+      },
+      {
+        "id": 2,
+        "text": "I am at home."
+      },
+      {
+        "id": 3,
+        "text": "He is my friend."
+      },
+      {
+        "id": 4,
+        "text": "She is in her room."
+      },
+      {
+        "id": 5,
+        "text": "We are here."
+      }
+    ],
+    "distractors": ["to have", "to go", "to eat"]
+  },
+  {
+    "word": "avoir",
+    "translation": "to have",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "I have a book."
+      },
+      {
+        "id": 2,
+        "text": "I have a house."
+      },
+      {
+        "id": 3,
+        "text": "She has an apple."
+      },
+      {
+        "id": 4,
+        "text": "We have bread."
+      },
+      {
+        "id": 5,
+        "text": "They have a family."
+      }
+    ],
+    "distractors": ["to be", "to go", "to drink"]
+  },
+  {
+    "word": "aller",
+    "translation": "to go",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "I am going home."
+      },
+      {
+        "id": 2,
+        "text": "I am going to my room."
+      },
+      {
+        "id": 3,
+        "text": "We are going home."
+      },
+      {
+        "id": 4,
+        "text": "She is going to her friend's house."
+      },
+      {
+        "id": 5,
+        "text": "They are going to school."
+      }
+    ],
+    "distractors": ["to be", "to have", "to eat"]
+  },
+  {
+    "word": "manger",
+    "translation": "to eat",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "I eat an apple."
+      },
+      {
+        "id": 2,
+        "text": "I eat bread."
+      },
+      {
+        "id": 3,
+        "text": "We eat at home."
+      },
+      {
+        "id": 4,
+        "text": "She eats an apple."
+      },
+      {
+        "id": 5,
+        "text": "They eat bread."
+      }
+    ],
+    "distractors": ["to drink", "to go", "to have"]
+  },
+  {
+    "word": "boire",
+    "translation": "to drink",
+    "sentenceTranslations": [
+      {
+        "id": 1,
+        "text": "I drink water."
+      },
+      {
+        "id": 2,
+        "text": "I drink milk."
+      },
+      {
+        "id": 3,
+        "text": "I drink coffee."
+      },
+      {
+        "id": 4,
+        "text": "We drink water."
+      },
+      {
+        "id": 5,
+        "text": "They drink coffee."
+      }
+    ],
+    "distractors": ["to eat", "to go", "to have"]
+  }
+]

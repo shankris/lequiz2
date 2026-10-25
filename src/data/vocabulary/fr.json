@@ -1,0 +1,102 @@
+[
+  {
+    "wordId": "homme",
+    "distractors": ["femme", "enfant", "ami"]
+  },
+  {
+    "wordId": "femme",
+    "distractors": ["homme", "fille", "ami"]
+  },
+  {
+    "wordId": "enfant",
+    "distractors": ["père", "maison", "ami"]
+  },
+  {
+    "wordId": "garçon",
+    "distractors": ["fille", "homme", "père"]
+  },
+  {
+    "wordId": "fille",
+    "distractors": ["garçon", "femme", "mère"]
+  },
+  {
+    "wordId": "père",
+    "distractors": ["mère", "frère", "ami"]
+  },
+  {
+    "wordId": "mère",
+    "distractors": ["père", "sœur", "ami"]
+  },
+  {
+    "wordId": "ami",
+    "distractors": ["famille", "père", "frère"]
+  },
+  {
+    "wordId": "amie",
+    "distractors": ["frère", "père", "garçon"]
+  },
+  {
+    "wordId": "famille",
+    "distractors": ["maison", "ami", "mère"]
+  },
+  {
+    "wordId": "maison",
+    "distractors": ["chambre", "table", "chaise"]
+  },
+  {
+    "wordId": "chambre",
+    "distractors": ["maison", "table", "chaise"]
+  },
+  {
+    "wordId": "table",
+    "distractors": ["chaise", "livre", "chambre"]
+  },
+  {
+    "wordId": "chaise",
+    "distractors": ["table", "chambre", "maison"]
+  },
+  {
+    "wordId": "livre",
+    "distractors": ["table", "chaise", "maison"]
+  },
+  {
+    "wordId": "eau",
+    "distractors": ["lait", "café", "pain"]
+  },
+  {
+    "wordId": "pain",
+    "distractors": ["lait", "eau", "pomme"]
+  },
+  {
+    "wordId": "lait",
+    "distractors": ["eau", "café", "pain"]
+  },
+  {
+    "wordId": "pomme",
+    "distractors": ["pain", "lait", "café"]
+  },
+  {
+    "wordId": "café",
+    "distractors": ["thé", "lait", "eau"]
+  },
+  {
+    "wordId": "être",
+    "distractors": ["avoir", "aller", "manger"]
+  },
+  {
+    "wordId": "avoir",
+    "distractors": ["être", "aller", "boire"]
+  },
+  {
+    "wordId": "aller",
+    "distractors": ["être", "avoir", "manger"]
+  },
+  {
+    "wordId": "manger",
+    "distractors": ["boire", "aller", "avoir"]
+  },
+  {
+    "wordId": "boire",
+    "distractors": ["manger", "aller", "avoir"]
+  }
+]

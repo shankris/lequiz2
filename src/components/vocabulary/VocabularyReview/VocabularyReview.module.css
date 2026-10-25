@@ -1,0 +1,399 @@
+/* src/components/vocabulary/VocabularyReview/VocabularyReview.module.css */
+
+/* --------------------------------------------------
+   Vocabulary Review
+-------------------------------------------------- */
+
+.vocabularyReview {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 20px;
+  width: 100%;
+  min-width: 0;
+}
+
+/* --------------------------------------------------
+   Sidebar
+-------------------------------------------------- */
+
+.vocabularyReviewSidebar {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--borderColor);
+  border-radius: 5px;
+  background-color: var(--surfaceColor);
+}
+
+.vocabularyReviewGroups {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  border-bottom: 1px solid var(--borderColor);
+}
+
+.vocabularyReviewGroup,
+.vocabularyReviewWord {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--textColor);
+  text-align: left;
+  cursor: pointer;
+}
+
+.vocabularyReviewGroup {
+  padding: 9px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.vocabularyReviewGroup:hover {
+  background-color: var(--mainContentBg);
+}
+
+.vocabularyReviewGroupActive {
+  background-color: var(--accentColor);
+  color: #ffffff;
+}
+
+.vocabularyReviewGroupActive:hover {
+  background-color: var(--accentColor);
+}
+
+.vocabularyReviewWords {
+  display: flex;
+  flex-direction: column;
+  max-height: 520px;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.vocabularyReviewWord {
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.vocabularyReviewWord:hover {
+  background-color: var(--mainContentBg);
+}
+
+.vocabularyReviewWordActive {
+  background-color: var(--mainContentBg);
+  color: var(--headingCol);
+  font-weight: 600;
+}
+
+/* --------------------------------------------------
+   Main Content
+-------------------------------------------------- */
+
+.vocabularyReviewMain {
+  min-width: 0;
+}
+
+.vocabularyReviewContent {
+  min-width: 0;
+  padding: 28px;
+  border: 1px solid var(--borderColor);
+  border-radius: 5px;
+  background-color: var(--surfaceColor);
+}
+
+/* --------------------------------------------------
+   Word Header
+-------------------------------------------------- */
+
+.vocabularyReviewWordHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.vocabularyReviewWordLabel {
+  color: var(--headingCol);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.vocabularyReviewTranslation {
+  margin-top: 6px;
+  color: var(--textColor);
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.vocabularyReviewAudioButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid var(--borderColor);
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--headingCol);
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.vocabularyReviewAudioButton:hover {
+  border-color: var(--accentColor);
+  background-color: var(--mainContentBg);
+  color: var(--accentColor);
+}
+
+/* --------------------------------------------------
+   Word Details
+-------------------------------------------------- */
+
+.vocabularyReviewDetails {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.vocabularyReviewDetails span {
+  padding: 4px 9px;
+  border-radius: 3px;
+  background-color: var(--mainContentBg);
+  color: var(--mutedColor);
+  font-size: 11px;
+  line-height: 1.3;
+  text-transform: capitalize;
+}
+
+/* --------------------------------------------------
+   Sentence
+-------------------------------------------------- */
+
+.vocabularyReviewSentence {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid var(--borderColor);
+  border-radius: 5px;
+  background-color: var(--mainContentBg);
+}
+
+.vocabularyReviewSentenceHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--mutedColor);
+  font-size: 11px;
+}
+
+.vocabularyReviewSentenceAudio {
+  width: 32px;
+  height: 32px;
+  margin-left: auto;
+}
+
+.vocabularyReviewSentenceContent {
+  min-height: 105px;
+  padding: 18px 0 8px;
+}
+
+.vocabularyReviewFrenchSentence {
+  margin: 0;
+  color: var(--headingCol);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.vocabularyReviewTranslatedSentence {
+  margin: 8px 0 0;
+  color: var(--textColor);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.vocabularyReviewSentenceNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.vocabularyReviewSentenceNavigation>button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--borderColor);
+  border-radius: 4px;
+  background-color: var(--surfaceColor);
+  color: var(--headingCol);
+  cursor: pointer;
+}
+
+.vocabularyReviewSentenceNavigation>button:hover {
+  border-color: var(--accentColor);
+  color: var(--accentColor);
+}
+
+.vocabularyReviewSentenceDots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.vocabularyReviewSentenceDot {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: var(--borderColor);
+  cursor: pointer;
+}
+
+.vocabularyReviewSentenceDotActive {
+  background-color: var(--accentColor);
+}
+
+/* --------------------------------------------------
+   Word Navigation
+-------------------------------------------------- */
+
+.vocabularyReviewNavigation {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.vocabularyReviewNavigation>button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  min-height: 36px;
+  padding: 7px 12px;
+  border: 1px solid var(--borderColor);
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--headingCol);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.vocabularyReviewNavigation>button:last-child {
+  justify-self: end;
+}
+
+.vocabularyReviewNavigation>button:hover:not(:disabled) {
+  border-color: var(--accentColor);
+  color: var(--accentColor);
+}
+
+.vocabularyReviewNavigation>button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.vocabularyReviewNavigation>span {
+  color: var(--mutedColor);
+  font-size: 11px;
+  text-align: center;
+}
+
+/* --------------------------------------------------
+   Responsive
+-------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .vocabularyReview {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .vocabularyReviewSidebar {
+    max-height: none;
+  }
+
+  .vocabularyReviewGroups {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px;
+  }
+
+  .vocabularyReviewWords {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-height: 220px;
+    gap: 2px;
+  }
+
+  .vocabularyReviewContent {
+    padding: 20px;
+  }
+
+  .vocabularyReviewWordLabel {
+    font-size: 26px;
+  }
+
+  .vocabularyReviewTranslation {
+    font-size: 16px;
+  }
+
+  .vocabularyReviewSentence {
+    padding: 16px;
+  }
+
+  .vocabularyReviewFrenchSentence {
+    font-size: 17px;
+  }
+
+  .vocabularyReviewTranslatedSentence {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vocabularyReviewGroups {
+    grid-template-columns: 1fr;
+  }
+
+  .vocabularyReviewWords {
+    grid-template-columns: 1fr;
+  }
+
+  .vocabularyReviewContent {
+    padding: 16px;
+  }
+
+  .vocabularyReviewWordLabel {
+    font-size: 24px;
+  }
+
+  .vocabularyReviewSentenceContent {
+    min-height: 125px;
+  }
+
+  .vocabularyReviewNavigation {
+    gap: 8px;
+  }
+
+  .vocabularyReviewNavigation>button {
+    padding: 7px 9px;
+  }
+}

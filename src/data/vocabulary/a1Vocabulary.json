@@ -1,0 +1,592 @@
+[
+  {
+    "id": "homme",
+    "order": 1,
+    "word": "homme",
+    "group": "people-family",
+    "partOfSpeech": "noun",
+    "forms": {
+      "masculine": {
+        "word": "homme",
+        "article": "l'",
+        "audio": "homme.mp3",
+        "plural": "hommes",
+        "pluralAudio": "homme-plural-masculine.mp3",
+        "sentences": [
+          { "id": 1, "text": "L'homme est ici.", "audio": "homme-01.mp3" },
+          { "id": 2, "text": "L'homme est mon père.", "audio": "homme-02.mp3" },
+          { "id": 3, "text": "Je connais cet homme.", "audio": "homme-03.mp3" },
+          { "id": 4, "text": "L'homme habite ici.", "audio": "homme-04.mp3" },
+          { "id": 5, "text": "C'est un homme gentil.", "audio": "homme-05.mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "femme",
+    "order": 2,
+    "word": "femme",
+    "group": "people-family",
+    "partOfSpeech": "noun",
+    "forms": {
+      "feminine": {
+        "word": "femme",
+        "article": "la",
+        "audio": "femme.mp3",
+        "plural": "femmes",
+        "pluralAudio": "femme-plural-feminine.mp3",
+        "sentences": [
+          { "id": 1, "text": "La femme est ici.", "audio": "femme-01.mp3" },
+          { "id": 2, "text": "La femme est ma mère.", "audio": "femme-02.mp3" },
+          { "id": 3, "text": "Je connais cette femme.", "audio": "femme-03.mp3" },
+          { "id": 4, "text": "La femme habite ici.", "audio": "femme-04.mp3" },
+          { "id": 5, "text": "C'est une femme gentille.", "audio": "femme-05.mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "enfant",
+    "order": 3,
+    "word": "enfant",
+    "group": "people-family",
+    "partOfSpeech": "noun",
+    "forms": {
+      "masculine": {
+        "word": "enfant",
+        "article": "l'",
+        "audio": "enfant.mp3",
+        "plural": "enfants",
+        "pluralAudio": "enfant-plural-masculine.mp3",
+        "sentences": [
+          { "id": 1, "text": "L'enfant joue.", "audio": "enfant-01.mp3" },
+          { "id": 2, "text": "L'enfant est dans la maison.", "audio": "enfant-02.mp3" },
+          { "id": 3, "text": "C'est un petit enfant.", "audio": "enfant-03.mp3" },
+          { "id": 4, "text": "L'enfant mange une pomme.", "audio": "enfant-04.mp3" },
+          { "id": 5, "text": "L'enfant est avec sa mère.", "audio": "enfant-05.mp3" }
+        ]
+      },
+      "feminine": {
+        "word": "enfant",
+        "article": "l'",
+        "audio": "enfant-feminine.mp3",
+        "plural": "enfants",
+        "pluralAudio": "enfant-plural-feminine.mp3",
+        "sentences": [
+          { "id": 1, "text": "L'enfant joue.", "audio": "enfant-feminine-01.mp3" },
+          { "id": 2, "text": "L'enfant est dans la maison.", "audio": "enfant-feminine-02.mp3" },
+          { "id": 3, "text": "C'est une petite enfant.", "audio": "enfant-feminine-03.mp3" },
+          { "id": 4, "text": "L'enfant mange une pomme.", "audio": "enfant-feminine-04.mp3" },
+          { "id": 5, "text": "L'enfant est avec sa mère.", "audio": "enfant-feminine-05.mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "garcon",
+    "order": 4,
+    "word": "garçon",
+    "group": "people-family",
+    "partOfSpeech": "noun",
+    "forms": {
+      "masculine": {
+        "word": "garçon",
+        "article": "le",
+        "audio": "garcon.mp3",
+        "plural": "garçons",
+        "pluralAudio": "garcon-plural-masculine.mp3",
+        "sentences": [
+          { "id": 1, "text": "Le garçon joue.", "audio": "garcon-01.mp3" },
+          { "id": 2, "text": "Le garçon est mon frère.", "audio": "garcon-02.mp3" },
+          { "id": 3, "text": "Je vois le garçon.", "audio": "garcon-03.mp3" },
+          { "id": 4, "text": "Le garçon mange une pomme.", "audio": "garcon-04.mp3" },
+          { "id": 5, "text": "Le garçon est dans sa chambre.", "audio": "garcon-05.mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "fille",
+    "order": 5,
+    "word": "fille",
+    "group": "people-family",
+    "partOfSpeech": "noun",
+    "forms": {
+      "feminine": {
+        "word": "fille",
+        "article": "la",
+        "audio": "fille.mp3",
+        "plural": "filles",
+        "pluralAudio": "fille-plural-feminine.mp3",
+        "sentences": [
+          { "id": 1, "text": "La fille joue.", "audio": "fille-01.mp3" },
+          { "id": 2, "text": "La fille est ma sœur.", "audio": "fille-02.mp3" },
+          { "id": 3, "text": "Je vois la fille.", "audio": "fille-03.mp3" },
+          { "id": 4, "text": "La fille mange une pomme.", "audio": "fille-04.mp3" },
+          { "id": 5, "text": "La fille est dans sa chambre.", "audio": "fille-05.mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "pere",
+    "order": 6,
+    "word": "père",
+    "group": "people-family",
+    "partOfSpeech": "noun",
+    "forms": {
+      "masculine": {
+        "word": "père",
+        "article": "le",
+        "audio": "pere.mp3",
+        "plural": "pères",
+        "pluralAudio": "pere-plural-masculine.mp3",
+        "sentences": [
+          { "id": 1, "text": "Le père est ici.", "audio": "pere-01.mp3" },
+          { "id": 2, "text": "Le père travaille.", "audio": "pere-02.mp3" },
+          { "id": 3, "text": "Je parle avec mon père.", "audio": "pere-03.mp3" },
+          { "id": 4, "text": "Mon père aime le café.", "audio": "pere-04.mp3" },
+          { "id": 5, "text": "Mon père est dans la maison.", "audio": "pere-05.mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "mere",
+    "order": 7,
+    "word": "mère",
+    "group": "people-family",
+    "partOfSpeech": "noun",
+    "forms": {
+      "feminine": {
+        "word": "mère",
+        "article": "la",
+        "audio": "mere.mp3",
+        "plural": "mères",
+        "pluralAudio": "mere-plural-feminine.mp3",
+        "sentences": [
+          { "id": 1, "text": "La mère est ici.", "audio": "mere-01.mp3" },
+          { "id": 2, "text": "Ma mère travaille.", "audio": "mere-02.mp3" },
+          { "id": 3, "text": "Je parle avec ma mère.", "audio": "mere-03.mp3" },
+          { "id": 4, "text": "Ma mère aime le café.", "audio": "mere-04.mp3" },
+          { "id": 5, "text": "Ma mère est dans la maison.", "audio": "mere-05.mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "ami",
+    "order": 8,
+    "word": "ami",
+    "group": "people-family",
+    "partOfSpeech": "noun",
+    "forms": {
+      "masculine": {
+        "word": "ami",
+        "article": "l'",
+        "audio": "ami.mp3",
+        "plural": "amis",
+        "pluralAudio": "ami-plural-masculine.mp3",
+        "sentences": [
+          { "id": 1, "text": "L'ami est ici.", "audio": "ami-01.mp3" },
+          { "id": 2, "text": "Mon ami habite ici.", "audio": "ami-02.mp3" },
+          { "id": 3, "text": "Je parle avec mon ami.", "audio": "ami-03.mp3" },
+          { "id": 4, "text": "Mon ami aime le café.", "audio": "ami-04.mp3" },
+          { "id": 5, "text": "Je vais chez mon ami.", "audio": "ami-05.mp3" }
+        ],
+        "pluralSentences": [{ "id": 1, "text": "Les amis sont ici.", "audio": "amis-01.mp3" }]
+      },
+      "feminine": {
+        "word": "amie",
+        "article": "l'",
+        "audio": "amie.mp3",
+        "plural": "amies",
+        "pluralAudio": "ami-plural-feminine.mp3",
+        "sentences": [
+          { "id": 1, "text": "Mon amie est ici.", "audio": "amie-01.mp3" },
+          { "id": 2, "text": "Mon amie habite ici.", "audio": "amie-02.mp3" },
+          { "id": 3, "text": "Je parle avec mon amie.", "audio": "amie-03.mp3" },
+          { "id": 4, "text": "Mon amie aime le café.", "audio": "amie-04.mp3" },
+          { "id": 5, "text": "Je vais chez mon amie.", "audio": "amie-05.mp3" }
+        ],
+        "pluralSentences": [{ "id": 1, "text": "Les amies sont ici.", "audio": "amies-01.mp3" }]
+      }
+    }
+  },
+  {
+    "id": "famille",
+    "order": 9,
+    "word": "famille",
+    "group": "people-family",
+    "partOfSpeech": "noun",
+    "forms": {
+      "feminine": {
+        "word": "famille",
+        "article": "la",
+        "audio": "famille.mp3",
+        "plural": "familles",
+        "pluralAudio": "famille-plural-feminine.mp3",
+        "sentences": [
+          { "id": 1, "text": "Ma famille est ici.", "audio": "famille-01.mp3" },
+          { "id": 2, "text": "J'aime ma famille.", "audio": "famille-02.mp3" },
+          { "id": 3, "text": "Ma famille habite ici.", "audio": "famille-03.mp3" },
+          { "id": 4, "text": "Ma famille est grande.", "audio": "famille-04.mp3" },
+          { "id": 5, "text": "Je parle avec ma famille.", "audio": "famille-05.mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "maison",
+    "order": 10,
+    "word": "maison",
+    "group": "home",
+    "partOfSpeech": "noun",
+    "forms": {
+      "feminine": {
+        "word": "maison",
+        "article": "la",
+        "audio": "maison.mp3",
+        "plural": "maisons",
+        "pluralAudio": "maison-plural-feminine.mp3",
+        "sentences": [
+          { "id": 1, "text": "La maison est grande.", "audio": "maison-01.mp3" },
+          { "id": 2, "text": "J'habite dans une maison.", "audio": "maison-02.mp3" },
+          { "id": 3, "text": "La maison est ici.", "audio": "maison-03.mp3" },
+          { "id": 4, "text": "Ma maison est belle.", "audio": "maison-04.mp3" },
+          { "id": 5, "text": "Je vais à la maison.", "audio": "maison-05.mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "chambre",
+    "order": 11,
+    "word": "chambre",
+    "group": "home",
+    "partOfSpeech": "noun",
+    "forms": {
+      "feminine": {
+        "word": "chambre",
+        "article": "la",
+        "audio": "chambre.mp3",
+        "plural": "chambres",
+        "pluralAudio": "chambre-plural-feminine.mp3",
+        "sentences": [
+          { "id": 1, "text": "Ma chambre est grande.", "audio": "chambre-01.mp3" },
+          { "id": 2, "text": "Je suis dans ma chambre.", "audio": "chambre-02.mp3" },
+          { "id": 3, "text": "La chambre est propre.", "audio": "chambre-03.mp3" },
+          { "id": 4, "text": "Ma chambre est ici.", "audio": "chambre-04.mp3" },
+          { "id": 5, "text": "Je vais dans ma chambre.", "audio": "chambre-05.mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "table",
+    "order": 12,
+    "word": "table",
+    "group": "home",
+    "partOfSpeech": "noun",
+    "forms": {
+      "feminine": {
+        "word": "table",
+        "article": "la",
+        "audio": "table.mp3",
+        "plural": "tables",
+        "pluralAudio": "table-plural-feminine.mp3",
+        "sentences": [
+          { "id": 1, "text": "La table est ici.", "audio": "table-01.mp3" },
+          { "id": 2, "text": "Le livre est sur la table.", "audio": "table-02.mp3" },
+          { "id": 3, "text": "Je suis à la table.", "audio": "table-03.mp3" },
+          { "id": 4, "text": "La table est grande.", "audio": "table-04.mp3" },
+          { "id": 5, "text": "Je nettoie la table.", "audio": "table-05.mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "chaise",
+    "order": 13,
+    "word": "chaise",
+    "group": "home",
+    "partOfSpeech": "noun",
+    "forms": {
+      "feminine": {
+        "word": "chaise",
+        "article": "la",
+        "audio": "chaise.mp3",
+        "plural": "chaises",
+        "pluralAudio": "chaise-plural-feminine.mp3",
+        "sentences": [
+          { "id": 1, "text": "La chaise est ici.", "audio": "chaise-01.mp3" },
+          { "id": 2, "text": "Je suis sur une chaise.", "audio": "chaise-02.mp3" },
+          { "id": 3, "text": "La chaise est près de la table.", "audio": "chaise-03.mp3" },
+          { "id": 4, "text": "Cette chaise est grande.", "audio": "chaise-04.mp3" },
+          { "id": 5, "text": "Je prends une chaise.", "audio": "chaise-05.mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "livre",
+    "order": 14,
+    "word": "livre",
+    "group": "home",
+    "partOfSpeech": "noun",
+    "forms": {
+      "masculine": {
+        "word": "livre",
+        "article": "le",
+        "audio": "livre.mp3",
+        "plural": "livres",
+        "pluralAudio": "livre-plural-masculine.mp3",
+        "sentences": [
+          { "id": 1, "text": "Le livre est sur la table.", "audio": "livre-01.mp3" },
+          { "id": 2, "text": "Je lis un livre.", "audio": "livre-02.mp3" },
+          { "id": 3, "text": "Ce livre est intéressant.", "audio": "livre-03.mp3" },
+          { "id": 4, "text": "Le livre est dans ma chambre.", "audio": "livre-04.mp3" },
+          { "id": 5, "text": "J'aime ce livre.", "audio": "livre-05.mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "eau",
+    "order": 15,
+    "word": "eau",
+    "group": "food-drink",
+    "partOfSpeech": "noun",
+    "forms": {
+      "feminine": {
+        "word": "eau",
+        "article": "l'",
+        "audio": "eau.mp3",
+        "plural": "eaux",
+        "pluralAudio": "eau-plural-feminine.mp3",
+        "sentences": [
+          { "id": 1, "text": "Je bois de l'eau.", "audio": "eau-01.mp3" },
+          { "id": 2, "text": "L'eau est froide.", "audio": "eau-02.mp3" },
+          { "id": 3, "text": "Je veux de l'eau.", "audio": "eau-03.mp3" },
+          { "id": 4, "text": "L'eau est sur la table.", "audio": "eau-04.mp3" },
+          { "id": 5, "text": "Il y a de l'eau ici.", "audio": "eau-05.mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "pain",
+    "order": 16,
+    "word": "pain",
+    "group": "food-drink",
+    "partOfSpeech": "noun",
+    "forms": {
+      "masculine": {
+        "word": "pain",
+        "article": "le",
+        "audio": "pain.mp3",
+        "plural": "pains",
+        "pluralAudio": "pain-plural-masculine.mp3",
+        "sentences": [
+          { "id": 1, "text": "Je mange du pain.", "audio": "pain-01.mp3" },
+          { "id": 2, "text": "Le pain est bon.", "audio": "pain-02.mp3" },
+          { "id": 3, "text": "J'achète du pain.", "audio": "pain-03.mp3" },
+          { "id": 4, "text": "Le pain est sur la table.", "audio": "pain-04.mp3" },
+          { "id": 5, "text": "Je veux du pain.", "audio": "pain-05.mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "lait",
+    "order": 17,
+    "word": "lait",
+    "group": "food-drink",
+    "partOfSpeech": "noun",
+    "forms": {
+      "masculine": {
+        "word": "lait",
+        "article": "le",
+        "audio": "lait.mp3",
+        "plural": "laits",
+        "pluralAudio": "lait-plural-masculine.mp3",
+        "sentences": [
+          { "id": 1, "text": "Je bois du lait.", "audio": "lait-01.mp3" },
+          { "id": 2, "text": "Le lait est froid.", "audio": "lait-02.mp3" },
+          { "id": 3, "text": "J'achète du lait.", "audio": "lait-03.mp3" },
+          { "id": 4, "text": "Le lait est dans la cuisine.", "audio": "lait-04.mp3" },
+          { "id": 5, "text": "Je veux du lait.", "audio": "lait-05.mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "pomme",
+    "order": 18,
+    "word": "pomme",
+    "group": "food-drink",
+    "partOfSpeech": "noun",
+    "forms": {
+      "feminine": {
+        "word": "pomme",
+        "article": "la",
+        "audio": "pomme.mp3",
+        "plural": "pommes",
+        "pluralAudio": "pomme-plural-feminine.mp3",
+        "sentences": [
+          { "id": 1, "text": "La pomme est rouge.", "audio": "pomme-01.mp3" },
+          { "id": 2, "text": "Je mange une pomme.", "audio": "pomme-02.mp3" },
+          { "id": 3, "text": "J'aime cette pomme.", "audio": "pomme-03.mp3" },
+          { "id": 4, "text": "La pomme est sur la table.", "audio": "pomme-04.mp3" },
+          { "id": 5, "text": "Je veux une pomme.", "audio": "pomme-05.mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "cafe",
+    "order": 19,
+    "word": "café",
+    "group": "food-drink",
+    "partOfSpeech": "noun",
+    "forms": {
+      "masculine": {
+        "word": "café",
+        "article": "le",
+        "audio": "cafe.mp3",
+        "plural": "cafés",
+        "pluralAudio": "cafe-plural-masculine.mp3",
+        "sentences": [
+          { "id": 1, "text": "Je bois du café.", "audio": "cafe-01.mp3" },
+          { "id": 2, "text": "Le café est chaud.", "audio": "cafe-02.mp3" },
+          { "id": 3, "text": "J'aime le café.", "audio": "cafe-03.mp3" },
+          { "id": 4, "text": "Le café est sur la table.", "audio": "cafe-04.mp3" },
+          { "id": 5, "text": "Je veux un café.", "audio": "cafe-05.mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "etre",
+    "order": 20,
+    "word": "être",
+    "group": "everyday-actions",
+    "partOfSpeech": "verb",
+    "forms": {
+      "default": {
+        "word": "être",
+        "audio": "etre.mp3",
+        "sentences": [
+          { "id": 1, "text": "Je suis ici.", "audio": "etre-01.mp3" },
+          { "id": 2, "text": "Je suis à la maison.", "audio": "etre-02.mp3" },
+          { "id": 3, "text": "Il est mon ami.", "audio": "etre-03.mp3" },
+          { "id": 4, "text": "Elle est dans sa chambre.", "audio": "etre-04.mp3" },
+          { "id": 5, "text": "Nous sommes ici.", "audio": "etre-05.mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "avoir",
+    "order": 21,
+    "word": "avoir",
+    "group": "everyday-actions",
+    "partOfSpeech": "verb",
+    "forms": {
+      "default": {
+        "word": "avoir",
+        "audio": "avoir.mp3",
+        "sentences": [
+          { "id": 1, "text": "J'ai un livre.", "audio": "avoir-01.mp3" },
+          { "id": 2, "text": "J'ai une maison.", "audio": "avoir-02.mp3" },
+          { "id": 3, "text": "Elle a une pomme.", "audio": "avoir-03.mp3" },
+          { "id": 4, "text": "Nous avons du pain.", "audio": "avoir-04.mp3" },
+          { "id": 5, "text": "Ils ont une famille.", "audio": "avoir-05.mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "aller",
+    "order": 22,
+    "word": "aller",
+    "group": "everyday-actions",
+    "partOfSpeech": "verb",
+    "forms": {
+      "default": {
+        "word": "aller",
+        "audio": "aller.mp3",
+        "sentences": [
+          { "id": 1, "text": "Je vais à la maison.", "audio": "aller-01.mp3" },
+          { "id": 2, "text": "Je vais dans ma chambre.", "audio": "aller-02.mp3" },
+          { "id": 3, "text": "Nous allons à la maison.", "audio": "aller-03.mp3" },
+          { "id": 4, "text": "Elle va chez son amie.", "audio": "aller-04.mp3" },
+          { "id": 5, "text": "Ils vont à l'école.", "audio": "aller-05.mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "manger",
+    "order": 23,
+    "word": "manger",
+    "group": "everyday-actions",
+    "partOfSpeech": "verb",
+    "forms": {
+      "default": {
+        "word": "manger",
+        "audio": "manger.mp3",
+        "sentences": [
+          { "id": 1, "text": "Je mange une pomme.", "audio": "manger-01.mp3" },
+          { "id": 2, "text": "Je mange du pain.", "audio": "manger-02.mp3" },
+          { "id": 3, "text": "Nous mangeons à la maison.", "audio": "manger-03.mp3" },
+          { "id": 4, "text": "Elle mange une pomme.", "audio": "manger-04.mp3" },
+          { "id": 5, "text": "Ils mangent du pain.", "audio": "manger-05.mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "boire",
+    "order": 24,
+    "word": "boire",
+    "group": "everyday-actions",
+    "partOfSpeech": "verb",
+    "forms": {
+      "default": {
+        "word": "boire",
+        "audio": "boire.mp3",
+        "sentences": [
+          { "id": 1, "text": "Je bois de l'eau.", "audio": "boire-01.mp3" },
+          { "id": 2, "text": "Je bois du lait.", "audio": "boire-02.mp3" },
+          { "id": 3, "text": "Je bois du café.", "audio": "boire-03.mp3" },
+          { "id": 4, "text": "Nous buvons de l'eau.", "audio": "boire-04.mp3" },
+          { "id": 5, "text": "Ils boivent du café.", "audio": "boire-05.mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "parent",
+    "order": 20,
+    "word": "parent",
+    "group": "people-family",
+    "partOfSpeech": "noun",
+    "forms": {
+      "masculine": {
+        "word": "parent",
+        "article": "le",
+        "audio": "parent.mp3",
+        "plural": "parents",
+        "pluralAudio": "parent-plural-masculine.mp3",
+        "sentences": [
+          { "id": 1, "text": "Le parent est ici.", "audio": "parent-01.mp3" },
+          { "id": 2, "text": "Je parle avec un parent.", "audio": "parent-02.mp3" },
+          { "id": 3, "text": "Ce parent est gentil.", "audio": "parent-03.mp3" },
+          { "id": 4, "text": "Le parent attend son enfant.", "audio": "parent-04.mp3" },
+          { "id": 5, "text": "Je connais ce parent.", "audio": "parent-05.mp3" }
+        ]
+      }
+    }
+  }
+]

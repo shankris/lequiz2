@@ -1,0 +1,126 @@
+.selector {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.heading h2 {
+  margin: 0;
+  color: var(--headingCol);
+  font-size: 1.5rem;
+}
+
+.heading p {
+  margin: 0;
+  color: var(--mutedColor);
+  line-height: 1.5;
+}
+
+.levelGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+.levelCard {
+  min-width: 0;
+  min-height: 140px;
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  background: var(--surfaceColor);
+  color: var(--txtColor);
+  border: 1px solid var(--borderColor);
+  border-radius: var(--borderRadius-lg);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.levelCard:hover {
+  border-color: var(--accentColor);
+}
+
+.levelCard:focus-visible,
+.startButton:focus-visible {
+  outline: 2px solid var(--focusColor);
+  outline-offset: 3px;
+}
+
+.levelCardSelected {
+  border-color: var(--accentColor);
+}
+
+.levelWordCount {
+  align-self: flex-end;
+  color: var(--mutedColor);
+  font-size: 0.875rem;
+}
+
+.levelInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.levelTitle {
+  color: var(--headingCol);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.levelDescription {
+  color: var(--mutedColor);
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.startButton {
+  width: 100%;
+  padding: 0.875rem var(--space-md);
+  border: 1px solid var(--accentColor);
+  border-radius: var(--borderRadius-md);
+  background: var(--accentColor);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.startButton:hover {
+  opacity: 0.9;
+}
+
+@media (min-width: 900px) {
+  .levelCardAll {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .levelGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .levelCard {
+    min-height: 120px;
+  }
+
+  .heading h2 {
+    font-size: 1.25rem;
+  }
+}

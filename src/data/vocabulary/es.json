@@ -1,0 +1,302 @@
+[
+  {
+    "word": "homme",
+    "translation": "hombre",
+    "sentenceTranslations": [
+      { "id": 1, "text": "El hombre está aquí." },
+      { "id": 2, "text": "El hombre es mi padre." },
+      { "id": 3, "text": "Conozco a este hombre." },
+      { "id": 4, "text": "El hombre vive aquí." },
+      { "id": 5, "text": "Es un hombre amable." }
+    ],
+    "distractors": ["mujer", "niño", "amigo"]
+  },
+  {
+    "word": "femme",
+    "translation": "mujer",
+    "sentenceTranslations": [
+      { "id": 1, "text": "La mujer está aquí." },
+      { "id": 2, "text": "La mujer es mi madre." },
+      { "id": 3, "text": "Conozco a esta mujer." },
+      { "id": 4, "text": "La mujer vive aquí." },
+      { "id": 5, "text": "Es una mujer amable." }
+    ],
+    "distractors": ["hombre", "niña", "amigo"]
+  },
+  {
+    "word": "enfant",
+    "translation": "niño",
+    "sentenceTranslations": [
+      { "id": 1, "text": "El niño está jugando." },
+      { "id": 2, "text": "El niño está en la casa." },
+      { "id": 3, "text": "Es un niño pequeño." },
+      { "id": 4, "text": "El niño está comiendo una manzana." },
+      { "id": 5, "text": "El niño está con su madre." }
+    ],
+    "distractors": ["padre", "casa", "amigo"]
+  },
+  {
+    "word": "garçon",
+    "translation": "niño",
+    "sentenceTranslations": [
+      { "id": 1, "text": "El niño está jugando." },
+      { "id": 2, "text": "El niño es mi hermano." },
+      { "id": 3, "text": "Veo al niño." },
+      { "id": 4, "text": "El niño está comiendo una manzana." },
+      { "id": 5, "text": "El niño está en su habitación." }
+    ],
+    "distractors": ["niña", "hombre", "padre"]
+  },
+  {
+    "word": "fille",
+    "translation": "niña",
+    "sentenceTranslations": [
+      { "id": 1, "text": "La niña está jugando." },
+      { "id": 2, "text": "La niña es mi hermana." },
+      { "id": 3, "text": "Veo a la niña." },
+      { "id": 4, "text": "La niña está comiendo una manzana." },
+      { "id": 5, "text": "La niña está en su habitación." }
+    ],
+    "distractors": ["niño", "mujer", "madre"]
+  },
+  {
+    "word": "père",
+    "translation": "padre",
+    "sentenceTranslations": [
+      { "id": 1, "text": "Mi padre está aquí." },
+      { "id": 2, "text": "Mi padre trabaja." },
+      { "id": 3, "text": "Hablo con mi padre." },
+      { "id": 4, "text": "A mi padre le gusta el café." },
+      { "id": 5, "text": "Mi padre está en la casa." }
+    ],
+    "distractors": ["madre", "hermano", "amigo"]
+  },
+  {
+    "word": "mère",
+    "translation": "madre",
+    "sentenceTranslations": [
+      { "id": 1, "text": "Mi madre está aquí." },
+      { "id": 2, "text": "Mi madre trabaja." },
+      { "id": 3, "text": "Hablo con mi madre." },
+      { "id": 4, "text": "A mi madre le gusta el café." },
+      { "id": 5, "text": "Mi madre está en la casa." }
+    ],
+    "distractors": ["padre", "hermana", "amigo"]
+  },
+  {
+    "word": "ami",
+    "translation": "amigo",
+    "sentenceTranslations": [
+      { "id": 1, "text": "Mi amigo está aquí." },
+      { "id": 2, "text": "Mi amigo vive aquí." },
+      { "id": 3, "text": "Hablo con mi amigo." },
+      { "id": 4, "text": "A mi amigo le gusta el café." },
+      { "id": 5, "text": "Voy a la casa de mi amigo." }
+    ],
+    "distractors": ["familia", "padre", "hermano"]
+  },
+  {
+    "word": "amie",
+    "translation": "amiga",
+    "sentenceTranslations": [
+      { "id": 1, "text": "Mi amiga está aquí." },
+      { "id": 2, "text": "Mi amiga vive aquí." },
+      { "id": 3, "text": "Hablo con mi amiga." },
+      { "id": 4, "text": "A mi amiga le gusta el café." },
+      { "id": 5, "text": "Voy a la casa de mi amiga." }
+    ],
+    "distractors": ["hermano", "padre", "niño"]
+  },
+  {
+    "word": "famille",
+    "translation": "familia",
+    "sentenceTranslations": [
+      { "id": 1, "text": "Mi familia está aquí." },
+      { "id": 2, "text": "Quiero a mi familia." },
+      { "id": 3, "text": "Mi familia vive aquí." },
+      { "id": 4, "text": "Mi familia es grande." },
+      { "id": 5, "text": "Hablo con mi familia." }
+    ],
+    "distractors": ["casa", "amigo", "madre"]
+  },
+  {
+    "word": "maison",
+    "translation": "casa",
+    "sentenceTranslations": [
+      { "id": 1, "text": "La casa es grande." },
+      { "id": 2, "text": "Vivo en una casa." },
+      { "id": 3, "text": "La casa está aquí." },
+      { "id": 4, "text": "Mi casa es bonita." },
+      { "id": 5, "text": "Voy a casa." }
+    ],
+    "distractors": ["habitación", "mesa", "silla"]
+  },
+  {
+    "word": "chambre",
+    "translation": "habitación",
+    "sentenceTranslations": [
+      { "id": 1, "text": "Mi habitación es grande." },
+      { "id": 2, "text": "Estoy en mi habitación." },
+      { "id": 3, "text": "La habitación está limpia." },
+      { "id": 4, "text": "Mi habitación está aquí." },
+      { "id": 5, "text": "Voy a mi habitación." }
+    ],
+    "distractors": ["casa", "mesa", "silla"]
+  },
+  {
+    "word": "table",
+    "translation": "mesa",
+    "sentenceTranslations": [
+      { "id": 1, "text": "La mesa está aquí." },
+      { "id": 2, "text": "El libro está sobre la mesa." },
+      { "id": 3, "text": "Estoy en la mesa." },
+      { "id": 4, "text": "La mesa es grande." },
+      { "id": 5, "text": "Estoy limpiando la mesa." }
+    ],
+    "distractors": ["silla", "libro", "habitación"]
+  },
+  {
+    "word": "chaise",
+    "translation": "silla",
+    "sentenceTranslations": [
+      { "id": 1, "text": "La silla está aquí." },
+      { "id": 2, "text": "Estoy sentado en una silla." },
+      { "id": 3, "text": "La silla está cerca de la mesa." },
+      { "id": 4, "text": "Esta silla es grande." },
+      { "id": 5, "text": "Tomo una silla." }
+    ],
+    "distractors": ["mesa", "habitación", "casa"]
+  },
+  {
+    "word": "livre",
+    "translation": "libro",
+    "sentenceTranslations": [
+      { "id": 1, "text": "El libro está sobre la mesa." },
+      { "id": 2, "text": "Estoy leyendo un libro." },
+      { "id": 3, "text": "Este libro es interesante." },
+      { "id": 4, "text": "El libro está en mi habitación." },
+      { "id": 5, "text": "Me gusta este libro." }
+    ],
+    "distractors": ["mesa", "silla", "casa"]
+  },
+  {
+    "word": "eau",
+    "translation": "agua",
+    "sentenceTranslations": [
+      { "id": 1, "text": "Bebo agua." },
+      { "id": 2, "text": "El agua está fría." },
+      { "id": 3, "text": "Quiero agua." },
+      { "id": 4, "text": "El agua está sobre la mesa." },
+      { "id": 5, "text": "Hay agua aquí." }
+    ],
+    "distractors": ["leche", "café", "pan"]
+  },
+  {
+    "word": "pain",
+    "translation": "pan",
+    "sentenceTranslations": [
+      { "id": 1, "text": "Como pan." },
+      { "id": 2, "text": "El pan está bueno." },
+      { "id": 3, "text": "Compro pan." },
+      { "id": 4, "text": "El pan está sobre la mesa." },
+      { "id": 5, "text": "Quiero pan." }
+    ],
+    "distractors": ["leche", "agua", "manzana"]
+  },
+  {
+    "word": "lait",
+    "translation": "leche",
+    "sentenceTranslations": [
+      { "id": 1, "text": "Bebo leche." },
+      { "id": 2, "text": "La leche está fría." },
+      { "id": 3, "text": "Compro leche." },
+      { "id": 4, "text": "La leche está en la cocina." },
+      { "id": 5, "text": "Quiero leche." }
+    ],
+    "distractors": ["agua", "café", "pan"]
+  },
+  {
+    "word": "pomme",
+    "translation": "manzana",
+    "sentenceTranslations": [
+      { "id": 1, "text": "Como una manzana." },
+      { "id": 2, "text": "La manzana es roja." },
+      { "id": 3, "text": "Me gusta esta manzana." },
+      { "id": 4, "text": "La manzana está sobre la mesa." },
+      { "id": 5, "text": "Quiero una manzana." }
+    ],
+    "distractors": ["pan", "leche", "café"]
+  },
+  {
+    "word": "café",
+    "translation": "café",
+    "sentenceTranslations": [
+      { "id": 1, "text": "Bebo café." },
+      { "id": 2, "text": "El café está caliente." },
+      { "id": 3, "text": "Me gusta el café." },
+      { "id": 4, "text": "El café está sobre la mesa." },
+      { "id": 5, "text": "Quiero un café." }
+    ],
+    "distractors": ["té", "leche", "agua"]
+  },
+  {
+    "word": "être",
+    "translation": "ser / estar",
+    "sentenceTranslations": [
+      { "id": 1, "text": "Estoy aquí." },
+      { "id": 2, "text": "Estoy en casa." },
+      { "id": 3, "text": "Él es mi amigo." },
+      { "id": 4, "text": "Ella está en su habitación." },
+      { "id": 5, "text": "Estamos aquí." }
+    ],
+    "distractors": ["tener", "ir", "comer"]
+  },
+  {
+    "word": "avoir",
+    "translation": "tener",
+    "sentenceTranslations": [
+      { "id": 1, "text": "Tengo un libro." },
+      { "id": 2, "text": "Tengo una casa." },
+      { "id": 3, "text": "Ella tiene una manzana." },
+      { "id": 4, "text": "Tenemos pan." },
+      { "id": 5, "text": "Tienen una familia." }
+    ],
+    "distractors": ["ser / estar", "ir", "beber"]
+  },
+  {
+    "word": "aller",
+    "translation": "ir",
+    "sentenceTranslations": [
+      { "id": 1, "text": "Voy a casa." },
+      { "id": 2, "text": "Voy a mi habitación." },
+      { "id": 3, "text": "Vamos a casa." },
+      { "id": 4, "text": "Ella va a casa de su amiga." },
+      { "id": 5, "text": "Van a la escuela." }
+    ],
+    "distractors": ["ser / estar", "tener", "comer"]
+  },
+  {
+    "word": "manger",
+    "translation": "comer",
+    "sentenceTranslations": [
+      { "id": 1, "text": "Como una manzana." },
+      { "id": 2, "text": "Como pan." },
+      { "id": 3, "text": "Comemos en casa." },
+      { "id": 4, "text": "Ella come una manzana." },
+      { "id": 5, "text": "Comen pan." }
+    ],
+    "distractors": ["beber", "ir", "tener"]
+  },
+  {
+    "word": "boire",
+    "translation": "beber",
+    "sentenceTranslations": [
+      { "id": 1, "text": "Bebo agua." },
+      { "id": 2, "text": "Bebo leche." },
+      { "id": 3, "text": "Bebo café." },
+      { "id": 4, "text": "Bebemos agua." },
+      { "id": 5, "text": "Beben café." }
+    ],
+    "distractors": ["comer", "ir", "tener"]
+  }
+]
