@@ -1,6 +1,7 @@
+/* src/app/[locale]/practice/[category]/[topic]/WordLevelSelector.js */
+
 "use client";
 
-import { useState } from "react";
 import styles from "./WordLevelSelector.module.css";
 
 const PRACTICE_OPTIONS = [
@@ -49,14 +50,6 @@ const PRACTICE_OPTIONS = [
 ];
 
 export default function WordLevelSelector({ onStart, wordCounts }) {
-  const [selectedId, setSelectedId] = useState("all");
-
-  function handleStart() {
-    const selectedOption = PRACTICE_OPTIONS.find((option) => option.id === selectedId);
-
-    onStart(selectedOption);
-  }
-
   return (
     <section className={styles.selector}>
       <div className={styles.heading}>
@@ -69,9 +62,10 @@ export default function WordLevelSelector({ onStart, wordCounts }) {
           <button
             key={option.id}
             type='button'
-            className={`${styles.levelCard} ${selectedId === option.id ? styles.levelCardSelected : ""} ${option.id === "all" ? styles.levelCardAll : ""}`}
-            onClick={() => setSelectedId(option.id)}
-            aria-pressed={selectedId === option.id}
+            className={`${styles.levelCard} ${option.id === "all" ? styles.levelCardAll : ""}`}
+            onClick={() => onStart(option)}
+            disabled={wordCounts[option.id] === 0}
+            aria-label={`${option.title}: ${wordCounts[option.id]} words. ${option.description}`}
           >
             <span className={styles.levelWordCount}>{wordCounts[option.id]} words</span>
 
@@ -82,14 +76,6 @@ export default function WordLevelSelector({ onStart, wordCounts }) {
           </button>
         ))}
       </div>
-
-      <button
-        type='button'
-        className={styles.startButton}
-        onClick={handleStart}
-      >
-        Start practice
-      </button>
     </section>
   );
 }
