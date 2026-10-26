@@ -4,7 +4,7 @@
 
 import { useRef, useState } from "react";
 import { Bell } from "lucide-react";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "motion/react";
 
 import notifications from "./notifications.json";
 import NotificationDropdown from "./NotificationDropdown";

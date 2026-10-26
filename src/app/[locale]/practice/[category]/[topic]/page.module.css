@@ -15,6 +15,7 @@
   border-radius: 16px;
   background: var(--surfaceColor);
   box-shadow: var(--shadow-sm);
+  min-height: 90vh;
 }
 
 .progress {
