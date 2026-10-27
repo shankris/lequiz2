@@ -15,7 +15,7 @@
   flex: 1;
   width: var(--contentWidth);
   max-width: var(--contentWidthMax);
-  padding: var(--genericPadding, 10px);
+  /* padding: var(--genericPadding, 10px); */
   padding-top: var(--headerHeight);
   margin-inline: auto;
 }

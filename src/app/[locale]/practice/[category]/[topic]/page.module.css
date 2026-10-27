@@ -62,7 +62,7 @@
 }
 
 .meaning {
-  margin: 8px 0 28px;
+  margin: 8px auto 28px;
   color: var(--mutedColor);
   font-size: 1rem;
   text-align: center;
@@ -209,7 +209,7 @@
 
 @media (max-width: 480px) {
   .page {
-    padding: 20px 12px 32px;
+    padding: 20px 0px 32px;
   }
 
   .quiz,
