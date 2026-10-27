@@ -42,13 +42,7 @@
     },
     {
       "id": "vocabulary",
-      "items": [
-        {
-          "id": "greetings",
-          "level": "A1",
-          "status": "available"
-        }
-      ]
+      "items": []
     },
     {
       "id": "adjectives",

@@ -2,20 +2,19 @@
 
 .page {
   width: 100%;
-  max-width: 760px;
   margin: 0 auto;
-  padding: 32px 20px 48px;
+  padding: 10px;
   color: var(--txtColor);
 }
 
 .quiz,
 .result {
+  min-height: 80vh;
   padding: 28px;
   border: 1px solid var(--borderColor);
   border-radius: 16px;
   background: var(--surfaceColor);
   box-shadow: var(--shadow-sm);
-  min-height: 90vh;
 }
 
 .progress {
@@ -76,6 +75,7 @@
 }
 
 .option {
+  position: relative;
   min-height: 60px;
   border: 1px solid var(--borderColor);
   border-radius: 10px;
@@ -110,6 +110,30 @@
   color: #991b1b;
 }
 
+.optionIconWrapper,
+.optionIconWrapperIncorrect {
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transform: translateY(-50%);
+  border: 2px solid;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.optionIconWrapper {
+  border-color: green;
+}
+
+.optionIconWrapperIncorrect {
+  border-color: #dc2626;
+}
+
 .feedback {
   margin-top: 20px;
   font-weight: 500;
@@ -123,10 +147,23 @@
   color: #dc2626;
 }
 
-.example {
-  /* margin-top: 24px; */
-  padding-top: 14px;
-  border-top: 1px solid var(--borderColor);
+.feedbackContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.feedbackHeading {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #dc2626;
+}
+
+.correctAnswer {
+  color: #111827;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .exampleDetails {
@@ -137,27 +174,10 @@
 }
 
 .detailTag {
-  margin: 20px 0 0 0;
+  margin: 20px 0 0;
   padding: 5px 10px;
-  /* border: 1px solid var(--borderColor); */
-  /* border-radius: 999px; */
   color: var(--mutedColor);
   font-size: 16px;
-}
-
-.exampleSentence {
-  margin: 0;
-  color: var(--headingCol);
-  font-size: 1.125rem;
-  font-weight: 500;
-  line-height: 1.6;
-}
-
-.exampleTranslation {
-  margin: 0 0;
-  color: var(--mutedColor);
-  font-size: 0.9375rem;
-  line-height: 1.6;
 }
 
 .primaryButton {
@@ -168,7 +188,7 @@
   border: none;
   border-radius: 10px;
   background: var(--accentColor);
-  color: #ffffff;
+  color: #fff;
   font: inherit;
   font-weight: 600;
   cursor: pointer;
@@ -207,6 +227,7 @@
 }
 
 /* Dark-mode feedback colors */
+
 html[data-theme="dark"] .option.correct {
   border-color: #4ade80;
   background: #153323;
@@ -225,61 +246,4 @@ html[data-theme="dark"] .feedbackCorrect {
 
 html[data-theme="dark"] .feedbackIncorrect {
   color: #f87171;
-}
-
-.option {
-  position: relative;
-}
-
-.optionIconWrapper {
-  position: absolute;
-  left: -10px;
-  top: 10px;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  border: 2px solid green;
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-}
-
-.optionIconWrapperIncorrect {
-  position: absolute;
-  left: -10px;
-  top: 10px;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  border: 2px solid #dc2626;
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-}
-
-.feedbackContent {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.feedbackHeading {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: #dc2626;
-}
-
-.correctAnswer {
-  color: #111827;
-  font-weight: 400;
-  font-size: 14px;
-}
-
-.explanationTable {
-  margin: 16px 0 0 0;
 }

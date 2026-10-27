@@ -7,6 +7,7 @@ import vocabulary from "@/data/vocabulary/definiteArticle.json";
 import englishVocabulary from "@/data/vocabulary/definiteArticle_en.json";
 import appConfig from "@/config/appConfig";
 import WordLevelSelector from "./WordLevelSelector";
+import SentenceCarousel from "./SentenceCarousel";
 
 import { Check, X } from "lucide-react";
 import styles from "./page.module.css";
@@ -34,7 +35,7 @@ function getWordDetails(record) {
   };
 }
 
-function getRandomSentence(record, englishRecord) {
+function getSentences(record, englishRecord) {
   const availableSentences = [];
 
   for (let i = 1; i <= 5; i++) {
@@ -62,11 +63,7 @@ function getRandomSentence(record, englishRecord) {
     });
   }
 
-  if (availableSentences.length === 0) {
-    return null;
-  }
-
-  return availableSentences[Math.floor(Math.random() * availableSentences.length)];
+  return availableSentences;
 }
 
 const WORD_LEVELS = {
@@ -106,7 +103,7 @@ export default function PracticeTopicPage() {
           gender: record.gender,
           form: record.number,
           answer: record.article,
-          sentence: getRandomSentence(record, details.englishRecord),
+          sentence: getSentences(record, details.englishRecord),
         };
       })
       .filter((question) => ANSWER_OPTIONS.includes(question.answer));
@@ -253,26 +250,7 @@ export default function PracticeTopicPage() {
               </span>
             </div>
 
-            {currentQuestion.sentence && (
-              <div className={styles.example}>
-                <p className={styles.exampleSentence}>{currentQuestion.sentence.text}</p>
-
-                {currentQuestion.sentence.translation && <p className={styles.exampleTranslation}>{currentQuestion.sentence.translation}</p>}
-
-                {currentQuestion.sentence.explanation.length > 0 && (
-                  <table className={styles.explanationTable}>
-                    <tbody>
-                      {currentQuestion.sentence.explanation.map((item, index) => (
-                        <tr key={index}>
-                          <td>{item.french}</td>
-                          <td>{item.english}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                )}
-              </div>
-            )}
+            <SentenceCarousel sentences={currentQuestion.sentence} />
           </>
         )}
 
@@ -282,7 +260,7 @@ export default function PracticeTopicPage() {
             className={styles.primaryButton}
             onClick={handleNext}
           >
-            {currentIndex === questions.length - 1 ? "See results" : "Next question"}
+            {currentIndex === questions.length - 1 ? "See results" : "Next"}
           </button>
         )}
       </section>
