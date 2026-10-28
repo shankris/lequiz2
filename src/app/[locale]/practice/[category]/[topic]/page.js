@@ -69,9 +69,7 @@ function getSentences(record, englishRecord) {
 const WORD_LEVELS = {
   group1: ["Beginner"],
   group2: ["Intermediate"],
-  "group1-2": ["Beginner", "Intermediate"],
   group3: ["Advanced"],
-  "group1-2-3": ["Beginner", "Intermediate", "Advanced"],
   group4: ["Challenge"],
   all: ["Beginner", "Intermediate", "Advanced", "Challenge"],
 };

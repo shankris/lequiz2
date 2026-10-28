@@ -105,11 +105,11 @@
   opacity: 0.9;
 }
 
-@media (min-width: 900px) {
+/* @media (min-width: 900px) {
   .levelCardAll {
     grid-column: 1 / -1;
   }
-}
+} */
 
 @media (max-width: 768px) {
   .levelGrid {

@@ -20,22 +20,10 @@ const PRACTICE_OPTIONS = [
     wordLevels: ["Intermediate"],
   },
   {
-    id: "group1-2",
-    title: "Group 1 and 2",
-    description: "Beginner and Intermediate",
-    wordLevels: ["Beginner", "Intermediate"],
-  },
-  {
     id: "group3",
     title: "Group 3",
     description: "Advanced",
     wordLevels: ["Advanced"],
-  },
-  {
-    id: "group1-2-3",
-    title: "Group 1, 2, and 3",
-    description: "Beginner to Advanced",
-    wordLevels: ["Beginner", "Intermediate", "Advanced"],
   },
   {
     id: "group4",
@@ -56,11 +44,8 @@ const wordCounts = {
   group2: vocabulary.filter((word) => word.Beginner === "Intermediate").length,
   group3: vocabulary.filter((word) => word.Beginner === "Advanced").length,
   group4: vocabulary.filter((word) => word.Beginner === "Challenge").length,
+  all: vocabulary.length,
 };
-
-wordCounts["group1-2"] = wordCounts.group1 + wordCounts.group2;
-wordCounts["group1-2-3"] = wordCounts.group1 + wordCounts.group2 + wordCounts.group3;
-wordCounts.all = vocabulary.length;
 
 export default function Vocabulary() {
   return (

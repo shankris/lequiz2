@@ -17,19 +17,9 @@ const PRACTICE_OPTIONS = [
     wordLevels: ["Intermediate"],
   },
   {
-    id: "group1-2",
-    title: "Group 1 + 2",
-    wordLevels: ["Beginner", "Intermediate"],
-  },
-  {
     id: "group3",
     title: "Group 3",
     wordLevels: ["Advanced"],
-  },
-  {
-    id: "group1-2-3",
-    title: "Group 1, 2, 3",
-    wordLevels: ["Beginner", "Intermediate", "Advanced"],
   },
   {
     id: "group4",
@@ -47,9 +37,7 @@ const PRACTICE_OPTIONS = [
 const VIEW_COUNTS = {
   group1: 12,
   group2: 18,
-  "group1-2": 24,
   group3: 15,
-  "group1-2-3": 21,
   group4: 10,
   all: 27,
 };

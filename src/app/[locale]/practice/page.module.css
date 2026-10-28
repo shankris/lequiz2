@@ -32,14 +32,11 @@
 
 .practiceCard {
   display: block;
-
   padding: 10px;
-
   border: 1px solid var(--borderColor);
   border-radius: 6px;
-
   background: var(--surfaceColor);
-
+  min-height: 140px;
   color: inherit;
   text-decoration: none;
 
