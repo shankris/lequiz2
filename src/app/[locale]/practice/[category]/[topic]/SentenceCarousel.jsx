@@ -24,6 +24,14 @@ export default function SentenceCarousel({ sentences = [] }) {
     setCurrentIndex((previous) => Math.min(sentences.length - 1, previous + 1));
   }
 
+  function handleSwipeEnd(event, info) {
+    if (info.offset.x < -50) {
+      handleNext();
+    } else if (info.offset.x > 50) {
+      handlePrevious();
+    }
+  }
+
   return (
     <section
       className={styles.carousel}
@@ -36,6 +44,10 @@ export default function SentenceCarousel({ sentences = [] }) {
         >
           <motion.div
             key={currentIndex}
+            drag='x'
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.15}
+            onDragEnd={handleSwipeEnd}
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}

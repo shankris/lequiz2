@@ -2,7 +2,6 @@
 
 "use client";
 
-import { useState } from "react";
 import { Eye, Calendar, Timer } from "lucide-react";
 import styles from "./WordLevelSelector.module.css";
 
@@ -44,9 +43,18 @@ const PRACTICE_OPTIONS = [
   },
 ];
 
-export default function WordLevelSelector({ onStart, wordCounts }) {
-  const [viewCounts] = useState(() => Object.fromEntries(PRACTICE_OPTIONS.map((option) => [option.id, Math.floor(Math.random() * 21) + 10])));
+// Stable placeholder counts prevent server/client hydration mismatches.
+const VIEW_COUNTS = {
+  group1: 12,
+  group2: 18,
+  "group1-2": 24,
+  group3: 15,
+  "group1-2-3": 21,
+  group4: 10,
+  all: 27,
+};
 
+export default function WordLevelSelector({ onStart, wordCounts }) {
   return (
     <section className={styles.selector}>
       <div className={styles.heading}>
@@ -76,7 +84,7 @@ export default function WordLevelSelector({ onStart, wordCounts }) {
                   size={15}
                   aria-hidden='true'
                 />
-                {viewCounts[option.id]}
+                {VIEW_COUNTS[option.id]}
               </span>
 
               <span className={styles.metaItem}>
