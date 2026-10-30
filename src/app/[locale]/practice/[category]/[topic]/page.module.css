@@ -10,11 +10,12 @@
 .quiz,
 .result {
   min-height: 80vh;
-  padding: 28px;
-  border: 1px solid var(--borderColor);
-  border-radius: 16px;
-  background: var(--surfaceColor);
-  box-shadow: var(--shadow-sm);
+  /* padding: 28px; */
+  /* border: 1px solid var(--borderColor); */
+  /* border-radius: 16px; */
+  /* background: var(--surfaceColor); */
+  /* box-shadow: var(--shadow-sm); */
+  max-width: 800px;
 }
 
 .progress {

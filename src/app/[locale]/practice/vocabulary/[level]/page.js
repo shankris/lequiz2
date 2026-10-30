@@ -12,7 +12,11 @@ import appConfig from "@/config/appConfig";
 
 import styles from "./page.module.css";
 
-const englishVocabulary = englishVocabularyData.Sheet1 ?? [];
+const englishVocabulary = Array.isArray(englishVocabularyData) ? englishVocabularyData : (englishVocabularyData.Sheet1 ?? []);
+
+console.log("English vocabulary data:", englishVocabularyData);
+console.log("Is array:", Array.isArray(englishVocabularyData));
+console.log("Top-level keys:", Object.keys(englishVocabularyData ?? {}));
 
 const WORD_LEVELS = {
   group1: ["Beginner"],
@@ -115,7 +119,26 @@ export default function VocabularyQuizPage() {
   const availableLevels = WORD_LEVELS[level];
 
   function handleStartQuiz() {
+    alert("Start practice button clicked");
+    console.log("handleStartQuiz is running");
+
+    if (!availableLevels) {
+      alert(`No available levels for: ${level}`);
+      return;
+    }
+
     if (!availableLevels) return;
+
+    console.log("Vocabulary counts by level:", Object.fromEntries(["Beginner", "Intermediate", "Advanced", "Challenge"].map((wordLevel) => [wordLevel, frenchVocabulary.filter((record) => record[wordLevel] === wordLevel).length])));
+
+    console.log(
+      "English records with valid answers:",
+      englishVocabulary.filter((record) => {
+        const options = (record.options ?? "").split("|").map((option) => option.trim());
+
+        return record.correct_answer?.trim() && options.includes(record.correct_answer.trim());
+      }).length,
+    );
 
     const availableQuestions = englishVocabulary.map(buildQuestion).filter(
       (question) =>
@@ -127,6 +150,14 @@ export default function VocabularyQuizPage() {
     );
 
     const randomizedQuestions = shuffleArray(availableQuestions).slice(0, appConfig.practice.numberOfQuestions);
+
+    // Temporary diagnostics — run these before the early return.
+    console.log("Vocabulary records:", frenchVocabulary.length);
+    console.log("English records:", englishVocabulary.length);
+    console.log("Matching French records:", englishVocabulary.filter((record) => frenchVocabulary.some((french) => french.word === record.word)).length);
+    console.log("Available questions:", availableQuestions.length);
+    console.log("Selected questions:", randomizedQuestions.length);
+    console.log("Route level:", level);
 
     if (randomizedQuestions.length === 0) return;
 
@@ -253,7 +284,6 @@ export default function VocabularyQuizPage() {
         <h1 className={styles.title}>Choose the correct meaning</h1>
 
         <div className={styles.word}>{currentQuestion.word}</div>
-        <p className={styles.meaning}>{currentQuestion.meaning}</p>
 
         <div className={styles.options}>
           {currentQuestion.options.map((option) => {
@@ -301,8 +331,6 @@ export default function VocabularyQuizPage() {
             className={styles.feedback}
             aria-live='polite'
           >
-            <p className={isCorrect ? styles.correctText : styles.incorrectText}>{isCorrect ? "Correct!" : `Not quite. The correct answer is: ${currentQuestion.answer}`}</p>
-
             {currentSentence && (
               <section className={styles.example}>
                 <h2>Example sentences</h2>
