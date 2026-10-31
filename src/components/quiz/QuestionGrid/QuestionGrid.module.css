@@ -212,3 +212,8 @@ html[data-theme="dark"] .incorrect {
   border: 1px solid var(--borderColor);
   border-radius: 4px;
 }
+
+.timeUnit {
+  font-weight: 400;
+  font-size: 14px;
+}

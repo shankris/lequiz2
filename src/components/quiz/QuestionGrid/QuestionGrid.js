@@ -7,7 +7,7 @@ function formatTime(milliseconds) {
     return `${Math.round(milliseconds)}ms`;
   }
 
-  return `${(milliseconds / 1000).toFixed(1)}s`;
+  return `${(milliseconds / 1000).toFixed(1)}`;
 }
 
 export default function QuestionGrid({ totalQuestions, responses, activeIndex, viewingIndex, onSelect }) {
@@ -82,7 +82,16 @@ export default function QuestionGrid({ totalQuestions, responses, activeIndex, v
         </div>
 
         <div className={`${styles.stat} ${styles.averageTime}`}>
-          <span className={styles.statValue}>{averageReactionTime}</span>
+          <span className={styles.statValue}>
+            {averageReactionTime !== "—" ? (
+              <>
+                {averageReactionTime}
+                {correctResponses.reduce((total, response) => total + response.reactionTimeMs, 0) / correctResponses.length >= 1000 && <span className={styles.timeUnit}> s</span>}
+              </>
+            ) : (
+              "—"
+            )}
+          </span>
           <span className={styles.statLabel}>Avg. Reaction Time</span>
         </div>
       </div>
