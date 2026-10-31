@@ -2,17 +2,27 @@
 
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import vocabulary from "@/data/vocabulary/definiteArticle.json";
 import englishVocabulary from "@/data/vocabulary/definiteArticle_en.json";
 import appConfig from "@/config/appConfig";
+
 import WordLevelSelector from "./WordLevelSelector";
 import SentenceCarousel from "./SentenceCarousel";
+import QuizQuestion from "@/components/quiz/QuizQuestion/QuizQuestion";
+import QuestionGrid from "@/components/quiz/QuestionGrid/QuestionGrid";
 
-import { Check, X } from "lucide-react";
 import styles from "./page.module.css";
 
 const ANSWER_OPTIONS = ["le", "la", "l'", "les"];
+
+const WORD_LEVELS = {
+  group1: ["Beginner"],
+  group2: ["Intermediate"],
+  group3: ["Advanced"],
+  group4: ["Challenge"],
+  all: ["Beginner", "Intermediate", "Advanced", "Challenge"],
+};
 
 function shuffleArray(items) {
   const shuffled = [...items];
@@ -23,6 +33,10 @@ function shuffleArray(items) {
   }
 
   return shuffled;
+}
+
+function isValidQuestion(record) {
+  return record.level === "A1" && record.article && record.noun && ["singular", "plural"].includes(record.number) && ANSWER_OPTIONS.includes(record.article);
 }
 
 function getWordDetails(record) {
@@ -66,31 +80,33 @@ function getSentences(record, englishRecord) {
   return availableSentences;
 }
 
-const WORD_LEVELS = {
-  group1: ["Beginner"],
-  group2: ["Intermediate"],
-  group3: ["Advanced"],
-  group4: ["Challenge"],
-  all: ["Beginner", "Intermediate", "Advanced", "Challenge"],
-};
-
-const isValidQuestion = (record) => record.level === "A1" && record.article && record.noun && ["singular", "plural"].includes(record.number) && ANSWER_OPTIONS.includes(record.article);
-
 const wordCounts = Object.fromEntries(Object.entries(WORD_LEVELS).map(([id, levels]) => [id, vocabulary.filter((record) => isValidQuestion(record) && levels.includes(record.wordLevel)).length]));
 
 export default function PracticeTopicPage() {
   const [questions, setQuestions] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [viewingIndex, setViewingIndex] = useState(0);
   const [responses, setResponses] = useState([]);
   const [isFinished, setIsFinished] = useState(false);
   const [quizStarted, setQuizStarted] = useState(false);
 
   const questionStartedAt = useRef(null);
+  const elapsedTimeMs = useRef(0);
 
+  // Current question and response
+  const currentQuestion = questions[viewingIndex];
+  const currentResponse = responses[viewingIndex];
+
+  const selectedAnswer = currentResponse?.selectedAnswer ?? null;
+  const isViewingActive = viewingIndex === activeIndex;
+
+  // Quiz score
+  const score = responses.filter((response) => response?.isCorrect).length;
+
+  // Start a new quiz
   function handleStartQuiz(selectedOption) {
     const availableQuestions = vocabulary
-      .filter((record) => record.level === "A1" && record.article && record.noun && ["singular", "plural"].includes(record.number) && selectedOption.wordLevels.includes(record.wordLevel))
+      .filter((record) => isValidQuestion(record) && selectedOption.wordLevels.includes(record.wordLevel))
       .map((record) => {
         const details = getWordDetails(record);
 
@@ -103,20 +119,107 @@ export default function PracticeTopicPage() {
           answer: record.article,
           sentence: getSentences(record, details.englishRecord),
         };
-      })
-      .filter((question) => ANSWER_OPTIONS.includes(question.answer));
+      });
 
     const randomizedQuestions = shuffleArray(availableQuestions).slice(0, appConfig.practice.numberOfQuestions);
 
     setQuestions(randomizedQuestions);
-    setCurrentIndex(0);
-    setSelectedAnswer(null);
-    setResponses([]);
+    setActiveIndex(0);
+    setViewingIndex(0);
+    setResponses(Array(randomizedQuestions.length).fill(null));
     setIsFinished(false);
+
+    elapsedTimeMs.current = 0;
     questionStartedAt.current = Date.now();
+
     setQuizStarted(true);
   }
 
+  // Select an answered question from the grid
+  function handleSelectQuestion(index) {
+    if (!responses[index]) return;
+
+    // Pause the timer if leaving an unanswered active question.
+    if (viewingIndex === activeIndex && !responses[activeIndex] && questionStartedAt.current !== null) {
+      elapsedTimeMs.current = Math.min(15000, elapsedTimeMs.current + (Date.now() - questionStartedAt.current));
+
+      questionStartedAt.current = null;
+    }
+
+    setViewingIndex(index);
+  }
+
+  // Return to the current unanswered question
+  function handleReturnToActive() {
+    setViewingIndex(activeIndex);
+
+    // Resume the timer if the active question is still unanswered.
+    if (!responses[activeIndex] && questionStartedAt.current === null) {
+      questionStartedAt.current = Date.now();
+    }
+  }
+
+  // Submit an answer
+  function handleAnswer(answer) {
+    if (viewingIndex !== activeIndex) return;
+    if (responses[activeIndex]) return;
+    if (!currentQuestion) return;
+
+    const reactionTimeMs = Math.min(15000, elapsedTimeMs.current + (Date.now() - questionStartedAt.current));
+
+    const response = {
+      questionIndex: activeIndex,
+      noun: currentQuestion.noun,
+      word: currentQuestion.word,
+      gender: currentQuestion.gender,
+      number: currentQuestion.form,
+      correctAnswer: currentQuestion.answer,
+      selectedAnswer: answer,
+      isCorrect: answer === currentQuestion.answer,
+      reactionTimeMs,
+    };
+
+    setResponses((previous) => {
+      const updated = [...previous];
+      updated[activeIndex] = response;
+      return updated;
+    });
+
+    questionStartedAt.current = null;
+  }
+
+  // Move to the next question or finish the quiz
+  function handleNext() {
+    if (!responses[activeIndex]) return;
+
+    if (activeIndex === questions.length - 1) {
+      setIsFinished(true);
+      return;
+    }
+
+    const nextIndex = activeIndex + 1;
+
+    setActiveIndex(nextIndex);
+    setViewingIndex(nextIndex);
+
+    elapsedTimeMs.current = 0;
+    questionStartedAt.current = Date.now();
+  }
+
+  // Return to the word-level selection screen
+  function handleTryAgain() {
+    setQuizStarted(false);
+    setQuestions([]);
+    setActiveIndex(0);
+    setViewingIndex(0);
+    setResponses([]);
+    setIsFinished(false);
+
+    questionStartedAt.current = null;
+    elapsedTimeMs.current = 0;
+  }
+
+  // Show the word-level selector before the quiz starts
   if (!quizStarted) {
     return (
       <main className={styles.page}>
@@ -128,140 +231,105 @@ export default function PracticeTopicPage() {
     );
   }
 
-  const currentQuestion = questions[currentIndex];
-  const isCorrect = selectedAnswer === currentQuestion?.answer;
-  const score = responses.filter((response) => response.isCorrect).length;
-
-  function handleAnswer(answer) {
-    if (selectedAnswer !== null) return;
-
-    const reactionTimeMs = Date.now() - questionStartedAt.current;
-
-    setSelectedAnswer(answer);
-    setResponses((previous) => [
-      ...previous,
-      {
-        noun: currentQuestion.noun,
-        word: currentQuestion.word,
-        gender: currentQuestion.gender,
-        number: currentQuestion.form,
-        correctAnswer: currentQuestion.answer,
-        selectedAnswer: answer,
-        isCorrect: answer === currentQuestion.answer,
-        reactionTimeMs,
-      },
-    ]);
-  }
-
-  function handleNext() {
-    if (currentIndex === questions.length - 1) {
-      setIsFinished(true);
-      return;
-    }
-
-    setCurrentIndex((previous) => previous + 1);
-    setSelectedAnswer(null);
-    questionStartedAt.current = Date.now();
-  }
-
-  if (isFinished) {
+  // Handle an empty question list
+  if (!currentQuestion) {
     return (
       <main className={styles.page}>
         <section className={styles.result}>
-          <h1>Quiz complete!</h1>
-          <p>
-            You answered {score} out of {questions.length} questions correctly.
-          </p>
+          <h1>No questions available</h1>
+
+          <p>There are no questions available for this selection.</p>
 
           <button
             type='button'
             className={styles.primaryButton}
-            onClick={() => window.location.reload()}
+            onClick={handleTryAgain}
           >
-            Try again
+            Go back
           </button>
         </section>
       </main>
     );
   }
 
+  // Metadata for the current question
+  const articlePhrase = currentQuestion.answer === "l'" ? `L'${currentQuestion.word}` : `${currentQuestion.answer} ${currentQuestion.word}`;
+
+  const genderLabel = currentQuestion.gender === "m" ? "Masculine" : currentQuestion.gender === "f" ? "Feminine" : currentQuestion.gender;
+
+  const numberLabel = currentQuestion.form === "singular" ? "Singular" : "Plural";
+
+  const metadata = `${articlePhrase} — ${genderLabel} ${numberLabel}`;
+
   return (
     <main className={styles.page}>
-      <section className={styles.quiz}>
-        <h1 className={styles.title}>Choose the definite article</h1>
+      <div className={styles.quizLayout}>
+        <section className={styles.quiz}>
+          {/* Quiz completion message */}
+          {isFinished && (
+            <div className={styles.result}>
+              <h1>Quiz complete!</h1>
 
-        <div className={styles.word}>{currentQuestion.word}</div>
-        <p className={styles.meaning}>{currentQuestion.meaning}</p>
-
-        <div className={styles.options}>
-          {ANSWER_OPTIONS.map((answer) => {
-            const isSelected = selectedAnswer === answer;
-            const isAnswer = currentQuestion.answer === answer;
-
-            let optionClass = styles.option;
-
-            if (selectedAnswer !== null && isAnswer) {
-              optionClass += ` ${styles.correct}`;
-            } else if (isSelected && !isCorrect) {
-              optionClass += ` ${styles.incorrect}`;
-            }
-
-            return (
-              <button
-                key={answer}
-                type='button'
-                className={optionClass}
-                onClick={() => handleAnswer(answer)}
-                disabled={selectedAnswer !== null}
-              >
-                {selectedAnswer !== null && isAnswer && (
-                  <div className={styles.optionIconWrapper}>
-                    <Check
-                      className={styles.optionIcon}
-                      size={22}
-                      strokeWidth={2.5}
-                    />
-                  </div>
-                )}
-
-                {selectedAnswer !== null && isSelected && !isCorrect && (
-                  <div className={styles.optionIconWrapperIncorrect}>
-                    <X
-                      size={18}
-                      strokeWidth={2.5}
-                      color='#dc2626'
-                    />
-                  </div>
-                )}
-
-                {answer}
-              </button>
-            );
-          })}
-        </div>
-
-        {selectedAnswer !== null && (
-          <>
-            <div className={styles.exampleDetails}>
-              <span className={styles.detailTag}>
-                {currentQuestion.answer === "l'" ? `L'${currentQuestion.word}` : `${currentQuestion.answer} ${currentQuestion.word}`} — {currentQuestion.gender === "m" ? "Masculine" : currentQuestion.gender === "f" ? "Feminine" : currentQuestion.gender} {currentQuestion.form === "singular" ? "Singular" : "Plural"}
-              </span>
+              <p>
+                You answered {score} out of {questions.length} questions correctly.
+              </p>
             </div>
+          )}
 
-            <SentenceCarousel sentences={currentQuestion.sentence} />
-          </>
-        )}
+          {/* Current question */}
+          <QuizQuestion
+            question='Choose the definite article'
+            word={currentQuestion.word}
+            translation={currentQuestion.meaning}
+            options={ANSWER_OPTIONS}
+            correctAnswer={currentQuestion.answer}
+            selectedAnswer={selectedAnswer}
+            onAnswer={handleAnswer}
+            questionNumber={viewingIndex + 1}
+            totalQuestions={questions.length}
+            metadata={metadata}
+            disabled={!isViewingActive || isFinished}
+          />
 
-        {selectedAnswer !== null && (
-          <button
-            type='button'
-            className={styles.primaryButton}
-            onClick={handleNext}
-          >
-            {currentIndex === questions.length - 1 ? "See results" : "Next"}
-          </button>
-        )}
-      </section>
+          {/* Sentence examples and navigation */}
+          {selectedAnswer !== null && (
+            <>
+              <SentenceCarousel
+                key={currentQuestion.noun}
+                sentences={currentQuestion.sentence}
+              />
+
+              {!isFinished &&
+                (isViewingActive ? (
+                  <button
+                    type='button'
+                    className={styles.primaryButton}
+                    onClick={handleNext}
+                  >
+                    {activeIndex === questions.length - 1 ? "See results" : "Next"}
+                  </button>
+                ) : (
+                  <button
+                    type='button'
+                    className={styles.primaryButton}
+                    onClick={handleReturnToActive}
+                  >
+                    Return to question {activeIndex + 1}
+                  </button>
+                ))}
+            </>
+          )}
+        </section>
+
+        {/* Question navigation grid */}
+        <QuestionGrid
+          totalQuestions={questions.length}
+          responses={responses}
+          activeIndex={activeIndex}
+          viewingIndex={viewingIndex}
+          onSelect={handleSelectQuestion}
+        />
+      </div>
     </main>
   );
 }
