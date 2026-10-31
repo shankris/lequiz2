@@ -60,6 +60,7 @@
   margin: 8px 0 0;
   font-size: 15px;
   color: var(--text-secondary, #737373);
+  width: 100%;
 }
 
 /* Options */
@@ -158,9 +159,9 @@
 }
 
 .metadata {
-  margin-top: 4px;
-  padding-top: 10px;
-  border-top: 1px solid currentColor;
+  /* margin-top: 4px; */
+  /* padding-top: 10px; */
+  /* border-top: 1px solid currentColor; */
   opacity: 0.85;
 }
 

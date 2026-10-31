@@ -1,18 +1,29 @@
-/* src/components/quiz/QuestionGrid/QuestionGrid.js */
-
 "use client";
 
 import styles from "./QuestionGrid.module.css";
 
 function formatTime(milliseconds) {
   if (milliseconds < 1000) {
-    return `${milliseconds}ms`;
+    return `${Math.round(milliseconds)}ms`;
   }
 
   return `${(milliseconds / 1000).toFixed(1)}s`;
 }
 
 export default function QuestionGrid({ totalQuestions, responses, activeIndex, viewingIndex, onSelect }) {
+  // Calculate statistics
+  const answeredResponses = responses.filter(Boolean);
+
+  const correctResponses = answeredResponses.filter((response) => response.isCorrect);
+
+  const correctCount = correctResponses.length;
+  const incorrectCount = answeredResponses.length - correctCount;
+  const unansweredCount = totalQuestions - answeredResponses.length;
+
+  const totalReactionTime = correctResponses.reduce((total, response) => total + response.reactionTimeMs, 0);
+
+  const averageReactionTime = correctResponses.length > 0 ? formatTime(totalReactionTime / correctResponses.length) : "—";
+
   return (
     <aside className={styles.sidebar}>
       <h2 className={styles.title}>Questions</h2>
@@ -53,16 +64,27 @@ export default function QuestionGrid({ totalQuestions, responses, activeIndex, v
         })}
       </div>
 
-      <div className={styles.legend}>
-        <span>
-          <i className={styles.legendCorrect} /> Correct
-        </span>
-        <span>
-          <i className={styles.legendIncorrect} /> Incorrect
-        </span>
-        <span>
-          <i className={styles.legendUnanswered} /> Not answered
-        </span>
+      {/* Statistics */}
+      <div className={styles.summary}>
+        <div className={styles.stat}>
+          <span className={`${styles.statValue} ${styles.statCorrect}`}>{correctCount}</span>
+          <span className={styles.statLabel}>Correct</span>
+        </div>
+
+        <div className={styles.stat}>
+          <span className={`${styles.statValue} ${styles.statIncorrect}`}>{incorrectCount}</span>
+          <span className={styles.statLabel}>Incorrect</span>
+        </div>
+
+        <div className={styles.stat}>
+          <span className={`${styles.statValue} ${styles.statUnanswered}`}>{unansweredCount}</span>
+          <span className={styles.statLabel}>Unanswered</span>
+        </div>
+
+        <div className={`${styles.stat} ${styles.averageTime}`}>
+          <span className={styles.statValue}>{averageReactionTime}</span>
+          <span className={styles.statLabel}>Avg. Reaction Time</span>
+        </div>
       </div>
     </aside>
   );

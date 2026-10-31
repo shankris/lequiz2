@@ -5,45 +5,34 @@
 import { Check, X } from "lucide-react";
 import styles from "./QuizQuestion.module.css";
 
-export default function QuizQuestion({ question, word, translation = "", options = [], correctAnswer, selectedAnswer = null, onAnswer, questionNumber, totalQuestions, answerLabel = "Choose your answer", explanation, metadata, onNext, nextLabel = "Next", disabled = false }) {
+export default function QuizQuestion({ question, word, translation = "", options = [], correctAnswer, selectedAnswer = null, onAnswer, questionNumber, totalQuestions, answerLabel = "", explanation, metadata, onNext, nextLabel = "Next", disabled = false, isFinished = false, score = 0 }) {
   const hasAnswered = selectedAnswer !== null;
   const isCorrect = selectedAnswer === correctAnswer;
   const isLastQuestion = questionNumber === totalQuestions;
 
+  // Show the correct definite article once the question is answered.
+  const displayedWord = hasAnswered ? (correctAnswer === "l'" ? `l'${word}` : `${correctAnswer} ${word}`) : word;
+
   function handleAnswer(answer) {
-    if (hasAnswered || disabled) return;
+    if (hasAnswered || disabled || isFinished) return;
     onAnswer?.(answer);
   }
 
   return (
     <section className={styles.quizQuestion}>
-      {/* Question progress */}
-      {questionNumber != null && totalQuestions != null && (
-        <div className={styles.progress}>
-          <span>
-            Question {questionNumber} of {totalQuestions}
-          </span>
-
-          <div className={styles.progressTrack}>
-            <div
-              className={styles.progressBar}
-              style={{
-                width: `${(questionNumber / totalQuestions) * 100}%`,
-              }}
-            />
-          </div>
-        </div>
-      )}
+      {/* Quiz completion */}
 
       {/* Question */}
-      {question && <h2 className={styles.question}>{question}</h2>}
+      {!isFinished && <h1 className={styles.question}>{question}</h1>}
 
       {/* Word and translation */}
       {word && (
         <div className={styles.wordSection}>
-          <div className={styles.word}>{word}</div>
+          <div className={styles.word}>{displayedWord}</div>
 
-          {translation && <p className={styles.translation}>{translation}</p>}
+          {hasAnswered && metadata && <div className={styles.metadata}>{metadata.split("—").pop().trim()}</div>}
+
+          {translation && <div className={styles.translation}>{translation}</div>}
         </div>
       )}
 
@@ -70,7 +59,7 @@ export default function QuizQuestion({ question, word, translation = "", options
                 type='button'
                 className={optionClass}
                 onClick={() => handleAnswer(option)}
-                disabled={hasAnswered || disabled}
+                disabled={hasAnswered || disabled || isFinished}
                 aria-pressed={isSelected}
               >
                 <span>{option}</span>
@@ -96,28 +85,8 @@ export default function QuizQuestion({ question, word, translation = "", options
         </div>
       </div>
 
-      {/* Answer feedback */}
-      {hasAnswered && (
-        <div
-          className={`${styles.feedback} ${isCorrect ? styles.feedbackCorrect : styles.feedbackIncorrect}`}
-          role='status'
-        >
-          <strong>{isCorrect ? "Correct!" : "Not quite!"}</strong>
-
-          {!isCorrect && (
-            <p>
-              Correct answer: <strong>{correctAnswer}</strong>
-            </p>
-          )}
-
-          {explanation && <div className={styles.explanation}>{explanation}</div>}
-
-          {metadata && <div className={styles.metadata}>{metadata}</div>}
-        </div>
-      )}
-
       {/* Next button */}
-      {hasAnswered && onNext && (
+      {!isFinished && hasAnswered && onNext && (
         <button
           type='button'
           className={styles.nextButton}

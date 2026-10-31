@@ -238,7 +238,7 @@ export default function PracticeTopicPage() {
         <section className={styles.result}>
           <h1>No questions available</h1>
 
-          <p>There are no questions available for this selection.</p>
+          <div className={styles.titleSubHead}>There are no questions available for this selection.</div>
 
           <button
             type='button'
@@ -268,7 +268,7 @@ export default function PracticeTopicPage() {
           {/* Quiz completion message */}
           {isFinished && (
             <div className={styles.result}>
-              <h1>Quiz complete!</h1>
+              <h1>Quiz Complete</h1>
 
               <p>
                 You answered {score} out of {questions.length} questions correctly.
@@ -289,6 +289,8 @@ export default function PracticeTopicPage() {
             totalQuestions={questions.length}
             metadata={metadata}
             disabled={!isViewingActive || isFinished}
+            isFinished={isFinished}
+            score={score}
           />
 
           {/* Sentence examples and navigation */}
