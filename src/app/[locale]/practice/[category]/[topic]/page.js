@@ -24,6 +24,8 @@ const WORD_LEVELS = {
   all: ["Beginner", "Intermediate", "Advanced", "Challenge"],
 };
 
+const GROUP_IDS = ["group1", "group2", "group3", "group4"];
+
 function shuffleArray(items) {
   const shuffled = [...items];
 
@@ -89,6 +91,7 @@ export default function PracticeTopicPage() {
   const [responses, setResponses] = useState([]);
   const [isFinished, setIsFinished] = useState(false);
   const [quizStarted, setQuizStarted] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(null);
 
   const questionStartedAt = useRef(null);
   const elapsedTimeMs = useRef(0);
@@ -105,6 +108,8 @@ export default function PracticeTopicPage() {
 
   // Start a new quiz
   function handleStartQuiz(selectedOption) {
+    setSelectedOption(selectedOption);
+
     const availableQuestions = vocabulary
       .filter((record) => isValidQuestion(record) && selectedOption.wordLevels.includes(record.wordLevel))
       .map((record) => {
@@ -133,6 +138,20 @@ export default function PracticeTopicPage() {
     questionStartedAt.current = Date.now();
 
     setQuizStarted(true);
+  }
+
+  // Move to the previous or next word group
+  function handleChangeGroup(direction) {
+    const currentGroupIndex = GROUP_IDS.indexOf(selectedOption?.id);
+    const nextGroupId = GROUP_IDS[currentGroupIndex + direction];
+
+    if (!nextGroupId) return;
+
+    handleStartQuiz({
+      ...selectedOption,
+      id: nextGroupId,
+      wordLevels: WORD_LEVELS[nextGroupId],
+    });
   }
 
   // Select an answered question from the grid
@@ -214,6 +233,7 @@ export default function PracticeTopicPage() {
     setViewingIndex(0);
     setResponses([]);
     setIsFinished(false);
+    setSelectedOption(null);
 
     questionStartedAt.current = null;
     elapsedTimeMs.current = 0;
@@ -319,6 +339,40 @@ export default function PracticeTopicPage() {
                     Return to question {activeIndex + 1}
                   </button>
                 ))}
+
+              {isFinished && (
+                <div className={styles.completionActions}>
+                  {/* Show Previous only for Groups 2, 3, and 4 */}
+                  {GROUP_IDS.indexOf(selectedOption?.id) > 0 && (
+                    <button
+                      type='button'
+                      className={styles.primaryButton}
+                      onClick={() => handleChangeGroup(-1)}
+                    >
+                      Previous Word Group
+                    </button>
+                  )}
+
+                  <button
+                    type='button'
+                    className={styles.primaryButton}
+                    onClick={() => handleStartQuiz(selectedOption)}
+                  >
+                    Retake This Quiz
+                  </button>
+
+                  {/* Show Next only for Groups 1, 2, and 3 */}
+                  {GROUP_IDS.indexOf(selectedOption?.id) >= 0 && GROUP_IDS.indexOf(selectedOption?.id) < GROUP_IDS.length - 1 && (
+                    <button
+                      type='button'
+                      className={styles.primaryButton}
+                      onClick={() => handleChangeGroup(1)}
+                    >
+                      Next Word Group
+                    </button>
+                  )}
+                </div>
+              )}
             </>
           )}
         </section>

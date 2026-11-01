@@ -108,3 +108,24 @@
     flex: none;
   }
 }
+
+.completionActions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  margin: 6px 0 20px;
+}
+
+.completionActions button {
+  width: 100%;
+  min-height: 24px;
+  font-weight: 300;
+  /* height: 100%; */
+}
+
+@media (max-width: 600px) {
+  .completionActions {
+    grid-template-columns: 1fr;
+  }
+}

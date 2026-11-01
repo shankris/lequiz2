@@ -8,27 +8,62 @@ import styles from "./WordLevelSelector.module.css";
 const PRACTICE_OPTIONS = [
   {
     id: "group1",
-    title: "Group 1",
+    title: "Group 1 words",
+    type: "words",
+    wordLevels: ["Beginner"],
+  },
+  {
+    id: "group1-sentences",
+    title: "Group 1 sentences",
+    type: "sentences",
     wordLevels: ["Beginner"],
   },
   {
     id: "group2",
-    title: "Group 2",
+    title: "Group 2 words",
+    type: "words",
+    wordLevels: ["Intermediate"],
+  },
+  {
+    id: "group2-sentences",
+    title: "Group 2 sentences",
+    type: "sentences",
     wordLevels: ["Intermediate"],
   },
   {
     id: "group3",
-    title: "Group 3",
+    title: "Group 3 words",
+    type: "words",
+    wordLevels: ["Advanced"],
+  },
+  {
+    id: "group3-sentences",
+    title: "Group 3 sentences",
+    type: "sentences",
     wordLevels: ["Advanced"],
   },
   {
     id: "group4",
-    title: "Group 4",
+    title: "Group 4 words",
+    type: "words",
+    wordLevels: ["Challenge"],
+  },
+  {
+    id: "group4-sentences",
+    title: "Group 4 sentences",
+    type: "sentences",
     wordLevels: ["Challenge"],
   },
   {
     id: "all",
-    title: "All",
+    title: "All words",
+    type: "words",
+    wordLevels: ["Beginner", "Intermediate", "Advanced", "Challenge"],
+  },
+  {
+    id: "all-sentences",
+    title: "All sentences",
+    type: "sentences",
     wordLevels: ["Beginner", "Intermediate", "Advanced", "Challenge"],
   },
 ];
