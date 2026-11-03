@@ -93,10 +93,11 @@ export default function WordLevelSelector({ onStart, wordCounts }) {
             className={`${styles.levelCard} ${option.id === "all" ? styles.levelCardAll : ""}`}
             onClick={() => onStart(option)}
             disabled={wordCounts[option.id] === 0}
-            aria-label={`${option.title}: ${wordCounts[option.id]} words`}
+            aria-label={`${option.title}: ${wordCounts[option.id]} ${option.type === "sentences" ? "questions" : "words"}`}
           >
-            <span className={styles.levelWordCount}>{wordCounts[option.id]} words</span>
-
+            <span className={styles.levelWordCount}>
+              {wordCounts[option.id]} {option.type === "sentences" ? "questions" : "words"}
+            </span>
             <span className={styles.levelInfo}>
               <span className={styles.levelTitle}>{option.title}</span>
             </span>
@@ -107,7 +108,7 @@ export default function WordLevelSelector({ onStart, wordCounts }) {
                   size={15}
                   aria-hidden='true'
                 />
-                {VIEW_COUNTS[option.id]}
+                {VIEW_COUNTS[option.id.replace("-sentences", "")]}
               </span>
 
               <span className={styles.metaItem}>

@@ -3,14 +3,18 @@
 "use client";
 
 import { useRef, useState } from "react";
+import appConfig from "@/config/appConfig";
+
 import vocabulary from "@/data/vocabulary/definiteArticle.json";
 import englishVocabulary from "@/data/vocabulary/definiteArticle_en.json";
-import appConfig from "@/config/appConfig";
+import sentenceVocabulary from "@/data/vocabulary/definiteArticleSentences.json";
+import englishSentences from "@/data/vocabulary/definiteArticleSentences_en.json";
 
 import WordLevelSelector from "./WordLevelSelector";
 import SentenceCarousel from "./SentenceCarousel";
 import QuizQuestion from "@/components/quiz/QuizQuestion/QuizQuestion";
 import QuestionGrid from "@/components/quiz/QuestionGrid/QuestionGrid";
+import QuizQuestionSentence from "@/components/quiz/QuizQuestionSentence/QuizQuestionSentence";
 
 import styles from "./page.module.css";
 
@@ -82,9 +86,67 @@ function getSentences(record, englishRecord) {
   return availableSentences;
 }
 
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function hasTargetArticle(sentence, noun, article) {
+  const articlePattern = article === "l'" ? "l['’]" : escapeRegExp(article);
+
+  const pattern = new RegExp(`(^|[\\s([{])${articlePattern}\\s*${escapeRegExp(noun)}(?=$|[\\s.,;:!?')’])`, "i");
+
+  return pattern.test(sentence);
+}
+
+// Build sentence questions from the French and English data
+const sentenceQuestionBank = sentenceVocabulary.flatMap((record) => {
+  if (record.level !== "A1" || !record.noun || !ANSWER_OPTIONS.includes(record.article)) {
+    return [];
+  }
+
+  const englishRecord = englishSentences.find((item) => item.noun === record.noun);
+
+  if (!englishRecord) return [];
+
+  return [1, 2, 3, 4, 5]
+    .map((number) => {
+      const sentence = record[`sentence${number}`]?.trim();
+      const translation = englishRecord[`sentence${number}`]?.trim();
+
+      if (!sentence || !translation || !hasTargetArticle(sentence, record.noun, record.article)) {
+        return null;
+      }
+
+      return {
+        noun: record.noun,
+        word: record.noun,
+        meaning: record.english ?? englishRecord.meaning ?? "",
+        gender: record.gender,
+        form: record.number,
+        answer: record.article,
+        wordLevel: record.wordLevel,
+        sentence,
+        sentenceNumber: number,
+        translation,
+        explanation: englishRecord[`explain${number}`] ?? "",
+      };
+    })
+    .filter(Boolean);
+});
+
+// Word counts
 const wordCounts = Object.fromEntries(Object.entries(WORD_LEVELS).map(([id, levels]) => [id, vocabulary.filter((record) => isValidQuestion(record) && levels.includes(record.wordLevel)).length]));
 
+// Sentence counts
+const sentenceCounts = Object.fromEntries(Object.entries(WORD_LEVELS).map(([id, levels]) => [id, sentenceQuestionBank.filter((question) => levels.includes(question.wordLevel)).length]));
+
+// Combine word and sentence counts
+Object.entries(sentenceCounts).forEach(([id, count]) => {
+  wordCounts[`${id}-sentences`] = count;
+});
+
 export default function PracticeTopicPage() {
+  // Quiz state
   const [questions, setQuestions] = useState([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [viewingIndex, setViewingIndex] = useState(0);
@@ -93,6 +155,7 @@ export default function PracticeTopicPage() {
   const [quizStarted, setQuizStarted] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
 
+  // Timer
   const questionStartedAt = useRef(null);
   const elapsedTimeMs = useRef(0);
 
@@ -107,24 +170,27 @@ export default function PracticeTopicPage() {
   const score = responses.filter((response) => response?.isCorrect).length;
 
   // Start a new quiz
-  function handleStartQuiz(selectedOption) {
-    setSelectedOption(selectedOption);
+  function handleStartQuiz(option) {
+    setSelectedOption(option);
 
-    const availableQuestions = vocabulary
-      .filter((record) => isValidQuestion(record) && selectedOption.wordLevels.includes(record.wordLevel))
-      .map((record) => {
-        const details = getWordDetails(record);
+    const availableQuestions =
+      option.type === "sentences"
+        ? sentenceQuestionBank.filter((question) => option.wordLevels.includes(question.wordLevel))
+        : vocabulary
+            .filter((record) => isValidQuestion(record) && option.wordLevels.includes(record.wordLevel))
+            .map((record) => {
+              const details = getWordDetails(record);
 
-        return {
-          ...details,
-          noun: record.noun,
-          word: record.noun,
-          gender: record.gender,
-          form: record.number,
-          answer: record.article,
-          sentence: getSentences(record, details.englishRecord),
-        };
-      });
+              return {
+                ...details,
+                noun: record.noun,
+                word: record.noun,
+                gender: record.gender,
+                form: record.number,
+                answer: record.article,
+                sentence: getSentences(record, details.englishRecord),
+              };
+            });
 
     const randomizedQuestions = shuffleArray(availableQuestions).slice(0, appConfig.practice.numberOfQuestions);
 
@@ -140,16 +206,20 @@ export default function PracticeTopicPage() {
     setQuizStarted(true);
   }
 
-  // Move to the previous or next word group
+  // Move between word groups
   function handleChangeGroup(direction) {
-    const currentGroupIndex = GROUP_IDS.indexOf(selectedOption?.id);
+    const currentGroupId = selectedOption?.id.replace("-sentences", "");
+    const currentGroupIndex = GROUP_IDS.indexOf(currentGroupId);
     const nextGroupId = GROUP_IDS[currentGroupIndex + direction];
 
     if (!nextGroupId) return;
 
+    const type = selectedOption.type;
+
     handleStartQuiz({
       ...selectedOption,
-      id: nextGroupId,
+      id: type === "sentences" ? `${nextGroupId}-sentences` : nextGroupId,
+      title: `${nextGroupId.replace("group", "Group ")} ${type === "sentences" ? "Sentences" : "Words"}`,
       wordLevels: WORD_LEVELS[nextGroupId],
     });
   }
@@ -158,7 +228,7 @@ export default function PracticeTopicPage() {
   function handleSelectQuestion(index) {
     if (!responses[index]) return;
 
-    // Pause the timer if leaving an unanswered active question.
+    // Pause the timer when leaving the active question
     if (viewingIndex === activeIndex && !responses[activeIndex] && questionStartedAt.current !== null) {
       elapsedTimeMs.current = Math.min(15000, elapsedTimeMs.current + (Date.now() - questionStartedAt.current));
 
@@ -172,7 +242,6 @@ export default function PracticeTopicPage() {
   function handleReturnToActive() {
     setViewingIndex(activeIndex);
 
-    // Resume the timer if the active question is still unanswered.
     if (!responses[activeIndex] && questionStartedAt.current === null) {
       questionStartedAt.current = Date.now();
     }
@@ -180,11 +249,11 @@ export default function PracticeTopicPage() {
 
   // Submit an answer
   function handleAnswer(answer) {
-    if (viewingIndex !== activeIndex) return;
-    if (responses[activeIndex]) return;
-    if (!currentQuestion) return;
+    if (viewingIndex !== activeIndex || responses[activeIndex] || !currentQuestion) {
+      return;
+    }
 
-    const reactionTimeMs = Math.min(15000, elapsedTimeMs.current + (Date.now() - questionStartedAt.current));
+    const reactionTimeMs = Math.min(15000, elapsedTimeMs.current + (questionStartedAt.current ? Date.now() - questionStartedAt.current : 0));
 
     const response = {
       questionIndex: activeIndex,
@@ -196,6 +265,8 @@ export default function PracticeTopicPage() {
       selectedAnswer: answer,
       isCorrect: answer === currentQuestion.answer,
       reactionTimeMs,
+      sentenceText: typeof currentQuestion.sentence === "string" ? currentQuestion.sentence : null,
+      sentenceNumber: currentQuestion.sentenceNumber ?? null,
     };
 
     setResponses((previous) => {
@@ -225,7 +296,7 @@ export default function PracticeTopicPage() {
     questionStartedAt.current = Date.now();
   }
 
-  // Return to the word-level selection screen
+  // Return to the practice selection screen
   function handleTryAgain() {
     setQuizStarted(false);
     setQuestions([]);
@@ -239,7 +310,7 @@ export default function PracticeTopicPage() {
     elapsedTimeMs.current = 0;
   }
 
-  // Show the word-level selector before the quiz starts
+  // Practice selection screen
   if (!quizStarted) {
     return (
       <main className={styles.page}>
@@ -251,7 +322,7 @@ export default function PracticeTopicPage() {
     );
   }
 
-  // Handle an empty question list
+  // Empty question list
   if (!currentQuestion) {
     return (
       <main className={styles.page}>
@@ -272,20 +343,22 @@ export default function PracticeTopicPage() {
     );
   }
 
-  // Metadata for the current question
+  // Question metadata
   const articlePhrase = currentQuestion.answer === "l'" ? `L'${currentQuestion.word}` : `${currentQuestion.answer} ${currentQuestion.word}`;
-
   const genderLabel = currentQuestion.gender === "m" ? "Masculine" : currentQuestion.gender === "f" ? "Feminine" : currentQuestion.gender;
-
   const numberLabel = currentQuestion.form === "singular" ? "Singular" : "Plural";
-
   const metadata = `${articlePhrase} — ${genderLabel} ${numberLabel}`;
+
+  const selectedGroupId = selectedOption?.id.replace("-sentences", "");
+  const selectedGroupIndex = GROUP_IDS.indexOf(selectedGroupId);
+
+  const groupLabel = selectedOption?.type === "sentences" ? "Sentence Group" : "Word Group";
 
   return (
     <main className={styles.page}>
       <div className={styles.quizLayout}>
         <section className={styles.quiz}>
-          {/* Quiz completion message */}
+          {/* Quiz completion */}
           {isFinished && (
             <div className={styles.result}>
               <h1>Quiz Complete</h1>
@@ -297,29 +370,47 @@ export default function PracticeTopicPage() {
           )}
 
           {/* Current question */}
-          <QuizQuestion
-            question='Choose the definite article'
-            word={currentQuestion.word}
-            translation={currentQuestion.meaning}
-            options={ANSWER_OPTIONS}
-            correctAnswer={currentQuestion.answer}
-            selectedAnswer={selectedAnswer}
-            onAnswer={handleAnswer}
-            questionNumber={viewingIndex + 1}
-            totalQuestions={questions.length}
-            metadata={metadata}
-            disabled={!isViewingActive || isFinished}
-            isFinished={isFinished}
-            score={score}
-          />
+          {selectedOption.type === "sentences" ? (
+            <QuizQuestionSentence
+              question='Choose the definite article'
+              sentence={currentQuestion.sentence}
+              noun={currentQuestion.noun}
+              translation={currentQuestion.translation}
+              explanation={currentQuestion.explanation}
+              options={ANSWER_OPTIONS}
+              correctAnswer={currentQuestion.answer}
+              selectedAnswer={selectedAnswer}
+              onAnswer={handleAnswer}
+              disabled={!isViewingActive || isFinished}
+              isFinished={isFinished}
+            />
+          ) : (
+            <QuizQuestion
+              question='Choose the definite article'
+              word={currentQuestion.word}
+              translation={currentQuestion.meaning}
+              options={ANSWER_OPTIONS}
+              correctAnswer={currentQuestion.answer}
+              selectedAnswer={selectedAnswer}
+              onAnswer={handleAnswer}
+              questionNumber={viewingIndex + 1}
+              totalQuestions={questions.length}
+              metadata={metadata}
+              disabled={!isViewingActive || isFinished}
+              isFinished={isFinished}
+              score={score}
+            />
+          )}
 
           {/* Sentence examples and navigation */}
           {selectedAnswer !== null && (
             <>
-              <SentenceCarousel
-                key={currentQuestion.noun}
-                sentences={currentQuestion.sentence}
-              />
+              {selectedOption.type === "words" && (
+                <SentenceCarousel
+                  key={currentQuestion.noun}
+                  sentences={currentQuestion.sentence}
+                />
+              )}
 
               {!isFinished &&
                 (isViewingActive ? (
@@ -340,16 +431,16 @@ export default function PracticeTopicPage() {
                   </button>
                 ))}
 
+              {/* Completion actions */}
               {isFinished && (
                 <div className={styles.completionActions}>
-                  {/* Show Previous only for Groups 2, 3, and 4 */}
-                  {GROUP_IDS.indexOf(selectedOption?.id) > 0 && (
+                  {selectedGroupIndex > 0 && (
                     <button
                       type='button'
                       className={styles.primaryButton}
                       onClick={() => handleChangeGroup(-1)}
                     >
-                      Previous Word Group
+                      Previous {groupLabel}
                     </button>
                   )}
 
@@ -361,14 +452,13 @@ export default function PracticeTopicPage() {
                     Retake This Quiz
                   </button>
 
-                  {/* Show Next only for Groups 1, 2, and 3 */}
-                  {GROUP_IDS.indexOf(selectedOption?.id) >= 0 && GROUP_IDS.indexOf(selectedOption?.id) < GROUP_IDS.length - 1 && (
+                  {selectedGroupIndex >= 0 && selectedGroupIndex < GROUP_IDS.length - 1 && (
                     <button
                       type='button'
                       className={styles.primaryButton}
                       onClick={() => handleChangeGroup(1)}
                     >
-                      Next Word Group
+                      Next {groupLabel}
                     </button>
                   )}
                 </div>
@@ -377,7 +467,7 @@ export default function PracticeTopicPage() {
           )}
         </section>
 
-        {/* Question navigation grid */}
+        {/* Question navigation */}
         <QuestionGrid
           totalQuestions={questions.length}
           responses={responses}
